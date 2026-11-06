@@ -1,0 +1,33 @@
+{
+  "titulo": "Elden Ring",
+  "descripcion": "Rol de acción en un mundo abierto oscuro, con jefes enormes y libertad para elegir el camino.",
+  "genero": "RPG",
+  "anio_lanzamiento": 2022,
+  "precio": 60000.0,
+  "stock": 7,
+  "imagen_url": "img/juegos/elden-ring.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/library_600x900.jpg",
+  "estudio_id": 6,
+  "id": 10,
+  "activo": true,
+  "estudio": {
+    "nombre": "FromSoftware",
+    "pais": "Japón",
+    "id": 6,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    }
+  ]
+}

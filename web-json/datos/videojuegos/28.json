@@ -1,0 +1,33 @@
+{
+  "titulo": "Baldur's Gate 3",
+  "descripcion": "Rol por turnos basado en Dungeons & Dragons, con un grupo de compañeros y decisiones que cambian todo.",
+  "genero": "RPG",
+  "anio_lanzamiento": 2023,
+  "precio": 52000.0,
+  "stock": 8,
+  "imagen_url": "img/juegos/baldur-s-gate-3.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/library_600x900.jpg",
+  "estudio_id": 15,
+  "id": 28,
+  "activo": true,
+  "estudio": {
+    "nombre": "Larian Studios",
+    "pais": "Bélgica",
+    "id": 15,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "titulo": "Super Smash Bros. Ultimate",
+  "descripcion": "Lucha para hasta ocho jugadores con personajes de muchas sagas distintas.",
+  "genero": "ACCION",
+  "anio_lanzamiento": 2018,
+  "precio": 52000.0,
+  "stock": 5,
+  "imagen_url": "img/juegos/super-smash-bros-ultimate.svg",
+  "imagen_respaldo_url": null,
+  "estudio_id": 1,
+  "id": 43,
+  "activo": true,
+  "estudio": {
+    "nombre": "Nintendo",
+    "pais": "Japón",
+    "id": 1,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "Nintendo Switch",
+      "id": 4
+    }
+  ]
+}

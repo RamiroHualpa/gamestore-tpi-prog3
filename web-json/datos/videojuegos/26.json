@@ -1,0 +1,25 @@
+{
+  "titulo": "Marvel's Spider-Man 2",
+  "descripcion": "Peter Parker y Miles Morales se balancean por Nueva York en una historia para dos héroes.",
+  "genero": "ACCION",
+  "anio_lanzamiento": 2023,
+  "precio": 62000.0,
+  "stock": 5,
+  "imagen_url": "img/juegos/marvel-s-spider-man-2.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/library_600x900.jpg",
+  "estudio_id": 14,
+  "id": 26,
+  "activo": true,
+  "estudio": {
+    "nombre": "Insomniac Games",
+    "pais": "Estados Unidos",
+    "id": 14,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    }
+  ]
+}

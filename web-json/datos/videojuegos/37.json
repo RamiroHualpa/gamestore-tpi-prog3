@@ -1,0 +1,25 @@
+{
+  "titulo": "Gran Turismo 7",
+  "descripcion": "Simulador de manejo con cientos de autos reales, circuitos famosos y un museo del automóvil.",
+  "genero": "CARRERAS",
+  "anio_lanzamiento": 2022,
+  "precio": 55000.0,
+  "stock": 4,
+  "imagen_url": null,
+  "imagen_respaldo_url": null,
+  "estudio_id": 20,
+  "id": 37,
+  "activo": true,
+  "estudio": {
+    "nombre": "Polyphony Digital",
+    "pais": "Japón",
+    "id": 20,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    }
+  ]
+}

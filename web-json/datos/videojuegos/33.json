@@ -1,0 +1,33 @@
+{
+  "titulo": "Monster Hunter: World",
+  "descripcion": "Cacerías de monstruos gigantes, solo o en grupo, para fabricar mejores armas y armaduras.",
+  "genero": "ACCION",
+  "anio_lanzamiento": 2018,
+  "precio": 28000.0,
+  "stock": 7,
+  "imagen_url": "img/juegos/monster-hunter-world.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/582010/library_600x900.jpg",
+  "estudio_id": 17,
+  "id": 33,
+  "activo": true,
+  "estudio": {
+    "nombre": "Capcom",
+    "pais": "Japón",
+    "id": 17,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    }
+  ]
+}

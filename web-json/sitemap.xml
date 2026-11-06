@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- sitemap.xml - La lista de páginas públicas que el buscador tiene que conocer.
+     Apunta a la versión publicada en GitHub Pages. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ramirohualpa.github.io/gamestore-tpi-prog3/web-json/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ramirohualpa.github.io/gamestore-tpi-prog3/web-json/juego.html?id=1</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>

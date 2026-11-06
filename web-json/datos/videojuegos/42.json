@@ -1,0 +1,33 @@
+{
+  "titulo": "Age of Empires IV",
+  "descripcion": "Estrategia en tiempo real con civilizaciones históricas, asedios y campañas documentales.",
+  "genero": "ESTRATEGIA",
+  "anio_lanzamiento": 2021,
+  "precio": 30000.0,
+  "stock": 5,
+  "imagen_url": "img/juegos/age-of-empires-iv.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1466860/library_600x900.jpg",
+  "estudio_id": 25,
+  "id": 42,
+  "activo": true,
+  "estudio": {
+    "nombre": "Relic Entertainment",
+    "pais": "Canadá",
+    "id": 25,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    }
+  ]
+}

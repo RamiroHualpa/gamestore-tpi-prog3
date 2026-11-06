@@ -1,0 +1,33 @@
+{
+  "titulo": "Assassin's Creed Valhalla",
+  "descripcion": "Eivor lidera un clan vikingo que llega a Inglaterra en busca de un nuevo hogar.",
+  "genero": "ACCION",
+  "anio_lanzamiento": 2020,
+  "precio": 35000.0,
+  "stock": 6,
+  "imagen_url": "img/juegos/assassin-s-creed-valhalla.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2208920/library_600x900.jpg",
+  "estudio_id": 16,
+  "id": 30,
+  "activo": true,
+  "estudio": {
+    "nombre": "Ubisoft",
+    "pais": "Francia",
+    "id": 16,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    }
+  ]
+}

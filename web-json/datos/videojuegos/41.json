@@ -1,0 +1,37 @@
+{
+  "titulo": "Celeste",
+  "descripcion": "Madeline sube una montaña en un juego de plataformas preciso que habla de ansiedad y superación.",
+  "genero": "INDIE",
+  "anio_lanzamiento": 2018,
+  "precio": 7000.0,
+  "stock": 12,
+  "imagen_url": "img/juegos/celeste.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/504230/library_600x900.jpg",
+  "estudio_id": 24,
+  "id": 41,
+  "activo": true,
+  "estudio": {
+    "nombre": "Extremely OK Games",
+    "pais": "Canadá",
+    "id": 24,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    },
+    {
+      "nombre": "Nintendo Switch",
+      "id": 4
+    }
+  ]
+}

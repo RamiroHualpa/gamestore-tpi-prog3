@@ -1,0 +1,29 @@
+{
+  "titulo": "Halo Infinite",
+  "descripcion": "El Jefe Maestro vuelve en una campaña semiabierta y un modo multijugador por equipos.",
+  "genero": "SHOOTER",
+  "anio_lanzamiento": 2021,
+  "precio": 30000.0,
+  "stock": 6,
+  "imagen_url": "img/juegos/halo-infinite.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1240440/library_600x900.jpg",
+  "estudio_id": 22,
+  "id": 39,
+  "activo": true,
+  "estudio": {
+    "nombre": "343 Industries",
+    "pais": "Estados Unidos",
+    "id": 22,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    }
+  ]
+}

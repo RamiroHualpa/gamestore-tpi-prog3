@@ -1,0 +1,37 @@
+{
+  "titulo": "EA Sports FC 25",
+  "descripcion": "Fútbol con ligas y equipos licenciados, modo carrera y partidos en línea.",
+  "genero": "DEPORTES",
+  "anio_lanzamiento": 2024,
+  "precio": 58000.0,
+  "stock": 10,
+  "imagen_url": "img/juegos/ea-sports-fc-25.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2669320/library_600x900.jpg",
+  "estudio_id": 11,
+  "id": 20,
+  "activo": true,
+  "estudio": {
+    "nombre": "EA Sports",
+    "pais": "Canadá",
+    "id": 11,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    },
+    {
+      "nombre": "Nintendo Switch",
+      "id": 4
+    }
+  ]
+}

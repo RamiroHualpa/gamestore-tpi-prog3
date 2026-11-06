@@ -1,0 +1,37 @@
+{
+  "titulo": "The Witcher 3: Wild Hunt",
+  "descripcion": "Geralt busca a Ciri en un mundo abierto lleno de contratos de monstruos y decisiones con consecuencias.",
+  "genero": "RPG",
+  "anio_lanzamiento": 2015,
+  "precio": 25000.0,
+  "stock": 9,
+  "imagen_url": "img/juegos/the-witcher-3-wild-hunt.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/library_600x900.jpg",
+  "estudio_id": 7,
+  "id": 13,
+  "activo": true,
+  "estudio": {
+    "nombre": "CD Projekt Red",
+    "pais": "Polonia",
+    "id": 7,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    },
+    {
+      "nombre": "Nintendo Switch",
+      "id": 4
+    }
+  ]
+}

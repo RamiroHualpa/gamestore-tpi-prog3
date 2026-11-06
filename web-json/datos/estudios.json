@@ -1,0 +1,164 @@
+[
+  {
+    "nombre": "343 Industries",
+    "pais": "Estados Unidos",
+    "id": 22,
+    "activo": true
+  },
+  {
+    "nombre": "CD Projekt Red",
+    "pais": "Polonia",
+    "id": 7,
+    "activo": true
+  },
+  {
+    "nombre": "Capcom",
+    "pais": "Japón",
+    "id": 17,
+    "activo": true
+  },
+  {
+    "nombre": "ConcernedApe",
+    "pais": "Estados Unidos",
+    "id": 5,
+    "activo": true
+  },
+  {
+    "nombre": "EA Sports",
+    "pais": "Canadá",
+    "id": 11,
+    "activo": true
+  },
+  {
+    "nombre": "Extremely OK Games",
+    "pais": "Canadá",
+    "id": 24,
+    "activo": true
+  },
+  {
+    "nombre": "Firaxis Games",
+    "pais": "Estados Unidos",
+    "id": 12,
+    "activo": true
+  },
+  {
+    "nombre": "FromSoftware",
+    "pais": "Japón",
+    "id": 6,
+    "activo": true
+  },
+  {
+    "nombre": "Insomniac Games",
+    "pais": "Estados Unidos",
+    "id": 14,
+    "activo": true
+  },
+  {
+    "nombre": "Larian Studios",
+    "pais": "Bélgica",
+    "id": 15,
+    "activo": true
+  },
+  {
+    "nombre": "Mojang Studios",
+    "pais": "Suecia",
+    "id": 10,
+    "activo": true
+  },
+  {
+    "nombre": "Motion Twin",
+    "pais": "Francia",
+    "id": 19,
+    "activo": true
+  },
+  {
+    "nombre": "Nintendo",
+    "pais": "Japón",
+    "id": 1,
+    "activo": true
+  },
+  {
+    "nombre": "Playground Games",
+    "pais": "Reino Unido",
+    "id": 4,
+    "activo": true
+  },
+  {
+    "nombre": "Polyphony Digital",
+    "pais": "Japón",
+    "id": 20,
+    "activo": true
+  },
+  {
+    "nombre": "Psyonix",
+    "pais": "Estados Unidos",
+    "id": 26,
+    "activo": true
+  },
+  {
+    "nombre": "Re-Logic",
+    "pais": "Estados Unidos",
+    "id": 18,
+    "activo": true
+  },
+  {
+    "nombre": "Relic Entertainment",
+    "pais": "Canadá",
+    "id": 25,
+    "activo": true
+  },
+  {
+    "nombre": "Rockstar Games",
+    "pais": "Estados Unidos",
+    "id": 8,
+    "activo": true
+  },
+  {
+    "nombre": "Santa Monica Studio",
+    "pais": "Estados Unidos",
+    "id": 3,
+    "activo": true
+  },
+  {
+    "nombre": "Supergiant Games",
+    "pais": "Estados Unidos",
+    "id": 9,
+    "activo": true
+  },
+  {
+    "nombre": "Team Cherry",
+    "pais": "Australia",
+    "id": 2,
+    "activo": true
+  },
+  {
+    "nombre": "Turn 10 Studios",
+    "pais": "Estados Unidos",
+    "id": 21,
+    "activo": true
+  },
+  {
+    "nombre": "Ubisoft",
+    "pais": "Francia",
+    "id": 16,
+    "activo": true
+  },
+  {
+    "nombre": "Valve",
+    "pais": "Estados Unidos",
+    "id": 13,
+    "activo": true
+  },
+  {
+    "nombre": "Visual Concepts",
+    "pais": "Estados Unidos",
+    "id": 27,
+    "activo": true
+  },
+  {
+    "nombre": "id Software",
+    "pais": "Estados Unidos",
+    "id": 23,
+    "activo": true
+  }
+]

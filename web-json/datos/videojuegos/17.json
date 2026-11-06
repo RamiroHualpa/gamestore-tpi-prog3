@@ -1,0 +1,37 @@
+{
+  "titulo": "Hades",
+  "descripcion": "Zagreo intenta escapar del inframundo. Cada intento es distinto y la historia avanza con cada muerte.",
+  "genero": "INDIE",
+  "anio_lanzamiento": 2020,
+  "precio": 12000.0,
+  "stock": 8,
+  "imagen_url": "img/juegos/hades.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1145360/library_600x900.jpg",
+  "estudio_id": 9,
+  "id": 17,
+  "activo": true,
+  "estudio": {
+    "nombre": "Supergiant Games",
+    "pais": "Estados Unidos",
+    "id": 9,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    },
+    {
+      "nombre": "Nintendo Switch",
+      "id": 4
+    }
+  ]
+}

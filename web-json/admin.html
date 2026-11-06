@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administrar videojuegos | GameStore</title>
+  <meta name="description" content="Panel para cargar, editar y dar de baja los videojuegos del catálogo.">
+  <!-- Las páginas de administración NO se indexan: el buscador no las muestra ni sigue sus enlaces -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0a0c16">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;800&display=swap">
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <script type="module" src="js/admin-juegos.js"></script>
+</head>
+
+<body>
+  <a class="saltar-al-contenido" href="#contenido">Saltar al contenido</a>
+
+  <header class="navbar">
+    <div class="contenedor navbar-contenido">
+      <a class="navbar-marca" href="index.html" aria-label="GameStore, ir al inicio">
+        <img class="navbar-logo" src="img/favicon.svg" alt="" width="36" height="36">
+        GameStore
+      </a>
+      <button class="btn btn-fantasma btn-icono navbar-toggle" type="button"
+              aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">☰</button>
+      <nav aria-label="Principal">
+        <ul class="navbar-menu" id="menu-principal">
+          <li><a class="navbar-enlace" href="index.html">Catálogo</a></li>
+          <li><a class="navbar-enlace" href="admin.html" aria-current="page">Administrar juegos</a></li>
+          <li><a class="navbar-enlace" href="estudios.html">Estudios y plataformas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Solo en esta versión: avisa que no hay API ni base de datos -->
+  <div class="contenedor mt-2">
+    <p class="alerta alerta-info mb-0"><strong>Versión sin API:</strong> los datos salen de archivos JSON de la carpeta <code>datos/</code>. Las altas, ediciones y bajas se guardan en memoria y se pierden al recargar.</p>
+  </div>
+
+  <main id="contenido" class="seccion">
+    <div class="contenedor">
+      <div class="seccion-encabezado">
+        <div>
+          <h1 class="seccion-titulo">Administrar videojuegos</h1>
+          <p class="seccion-subtitulo">Alta, edición y baja lógica, guardadas en memoria.</p>
+        </div>
+        <button class="btn btn-primario" id="boton-nuevo" type="button">＋ Nuevo videojuego</button>
+      </div>
+
+      <!-- Métricas que llegan de GET /videojuegos/resumen -->
+      <dl class="metricas" aria-label="Resumen del catálogo">
+        <div class="metrica"><dt>Juegos activos</dt><dd id="metrica-activos">–</dd></div>
+        <div class="metrica"><dt>Unidades en stock</dt><dd id="metrica-unidades">–</dd></div>
+        <div class="metrica"><dt>Sin stock</dt><dd id="metrica-sin-stock">–</dd></div>
+        <div class="metrica"><dt>Géneros con juegos</dt><dd id="metrica-generos">–</dd></div>
+      </dl>
+
+      <form class="filtros barra-simple" id="buscador" role="search" aria-label="Buscar en la tabla">
+        <div class="form-grupo mb-0">
+          <label class="form-etiqueta" for="buscar">Buscar por título o descripción</label>
+          <input class="form-control" id="buscar" name="q" type="search" maxlength="50" autocomplete="off"
+                 placeholder="Por ejemplo, zelda">
+        </div>
+      </form>
+
+      <!-- La tabla tiene el encabezado escrito en el HTML; las filas las arma JavaScript -->
+      <div class="tabla-contenedor">
+        <table class="tabla">
+          <caption class="oculto-visual">Videojuegos activos, diez por página</caption>
+          <thead>
+            <tr>
+              <th scope="col" class="numero">ID</th>
+              <th scope="col"><span class="oculto-visual">Portada</span></th>
+              <th scope="col">Título</th>
+              <th scope="col">Género</th>
+              <th scope="col">Estudio</th>
+              <th scope="col">Plataformas</th>
+              <th scope="col" class="numero">Precio</th>
+              <th scope="col" class="numero">Stock</th>
+              <th scope="col"><span class="oculto-visual">Acciones</span></th>
+            </tr>
+          </thead>
+          <tbody id="cuerpo-tabla"></tbody>
+        </table>
+      </div>
+      <nav class="paginacion" id="paginacion" aria-label="Páginas de la tabla" hidden></nav>
+
+      <!-- Panel didáctico: el JSON que se envió y el que devolvió la API -->
+      <details class="panel-json" id="panel-json" hidden>
+        <summary>Último envío: el JSON que viajó y el que volvió</summary>
+        <div class="panel-json-cuerpo">
+          <p class="texto-suave">Pedido: <code id="json-ruta"></code></p>
+          <div class="grilla-dos">
+            <section aria-labelledby="titulo-enviado">
+              <h2 class="h-chico" id="titulo-enviado">Enviado (lo que espera el schema de entrada)</h2>
+              <pre class="codigo" id="json-enviado"></pre>
+            </section>
+            <section aria-labelledby="titulo-recibido">
+              <h2 class="h-chico" id="titulo-recibido">Recibido (VideojuegoPublic, sin costo_proveedor)</h2>
+              <pre class="codigo" id="json-recibido"></pre>
+            </section>
+          </div>
+        </div>
+      </details>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-columnas">
+      <div>
+        <p class="mb-0"><strong>GameStore</strong> · Ejemplo de la Tecnicatura Universitaria en Programación</p>
+        <p class="mb-0"><small>&copy; <span id="anio-actual">2026</span> · Portadas ilustrativas, no son las originales.</small></p>
+      </div>
+      <nav aria-label="Pie de página">
+        <ul class="pie-enlaces">
+          <li><a href="index.html">Catálogo</a></li>
+          <li><a href="admin.html">Administrar juegos</a></li>
+          <li><a href="estudios.html">Estudios y plataformas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ================= MODAL DEL FORMULARIO =================
+       <dialog> es una ventana modal nativa: se abre con showModal() y se cierra con close().
+       El formulario NO lleva novalidate: el navegador controla required, minlength, min y max. -->
+  <dialog class="modal" id="modal-juego" aria-labelledby="titulo-modal">
+    <form id="form-juego">
+      <header class="modal-encabezado">
+        <h2 class="modal-titulo" id="titulo-modal">Nuevo videojuego</h2>
+        <button class="btn btn-fantasma btn-icono" id="boton-cerrar" type="button" aria-label="Cerrar">✕</button>
+      </header>
+
+      <div class="modal-cuerpo">
+        <div id="alerta-formulario" hidden></div>
+
+        <div class="form-grupo">
+          <label class="form-etiqueta" for="titulo">Título <span class="requerido" aria-hidden="true">*</span></label>
+          <input class="form-control" id="titulo" name="titulo" type="text" required minlength="2" maxlength="80"
+                 placeholder="Por ejemplo, Hollow Knight">
+          <p class="form-error" data-error-de="titulo" hidden></p>
+        </div>
+
+        <div class="form-grupo">
+          <label class="form-etiqueta" for="descripcion">Descripción <span class="requerido" aria-hidden="true">*</span></label>
+          <textarea class="form-control" id="descripcion" name="descripcion" required minlength="10" maxlength="300"
+                    aria-describedby="contador-descripcion"></textarea>
+          <p class="form-ayuda" id="contador-descripcion">0 / 300</p>
+          <p class="form-error" data-error-de="descripcion" hidden></p>
+        </div>
+
+        <div class="form-fila">
+          <div class="form-grupo">
+            <label class="form-etiqueta" for="genero">Género <span class="requerido" aria-hidden="true">*</span></label>
+            <select class="form-select" id="genero" name="genero" required>
+              <option value="">Elegí un género</option>
+            </select>
+            <p class="form-error" data-error-de="genero" hidden></p>
+          </div>
+          <div class="form-grupo">
+            <label class="form-etiqueta" for="estudio_id">Estudio <span class="requerido" aria-hidden="true">*</span></label>
+            <select class="form-select" id="estudio_id" name="estudio_id" required>
+              <option value="">Elegí un estudio</option>
+            </select>
+            <p class="form-error" data-error-de="estudio_id" hidden></p>
+          </div>
+        </div>
+
+        <div class="form-fila">
+          <div class="form-grupo">
+            <label class="form-etiqueta" for="precio">Precio de venta <span class="requerido" aria-hidden="true">*</span></label>
+            <input class="form-control" id="precio" name="precio" type="number" required min="0.01" max="500000" step="0.01">
+            <p class="form-error" data-error-de="precio" hidden></p>
+          </div>
+          <div class="form-grupo">
+            <label class="form-etiqueta" for="costo_proveedor">Costo del proveedor</label>
+            <input class="form-control" id="costo_proveedor" name="costo_proveedor" type="number" min="0.01" step="0.01"
+                   aria-describedby="ayuda-costo">
+            <p class="form-ayuda" id="ayuda-costo"></p>
+            <p class="form-error" data-error-de="costo_proveedor" hidden></p>
+          </div>
+        </div>
+
+        <div class="form-fila">
+          <div class="form-grupo">
+            <label class="form-etiqueta" for="stock">Stock <span class="requerido" aria-hidden="true">*</span></label>
+            <input class="form-control" id="stock" name="stock" type="number" required min="0" max="9999" step="1" value="0">
+            <p class="form-error" data-error-de="stock" hidden></p>
+          </div>
+          <div class="form-grupo">
+            <label class="form-etiqueta" for="anio_lanzamiento">Año de lanzamiento <span class="requerido" aria-hidden="true">*</span></label>
+            <input class="form-control" id="anio_lanzamiento" name="anio_lanzamiento" type="number" required
+                   min="1980" max="2030" step="1">
+            <p class="form-error" data-error-de="anio_lanzamiento" hidden></p>
+          </div>
+        </div>
+
+        <div class="campo-con-vista">
+          <div>
+            <div class="form-grupo">
+              <label class="form-etiqueta" for="imagen_url">Imagen propia (opcional)</label>
+              <input class="form-control" id="imagen_url" name="imagen_url" type="text" maxlength="255"
+                     placeholder="img/juegos/hades.webp" aria-describedby="ayuda-imagen">
+              <p class="form-ayuda" id="ayuda-imagen">Archivo comprimido dentro de la carpeta web (o una dirección https).</p>
+              <p class="form-error" data-error-de="imagen_url" hidden></p>
+            </div>
+            <div class="form-grupo">
+              <label class="form-etiqueta" for="imagen_respaldo_url">Imagen de respaldo en internet (opcional)</label>
+              <input class="form-control" id="imagen_respaldo_url" name="imagen_respaldo_url" type="url" maxlength="255"
+                     placeholder="https://…" aria-describedby="ayuda-respaldo">
+              <p class="form-ayuda" id="ayuda-respaldo">Se usa si la propia no carga en 3 segundos.</p>
+              <p class="form-error" data-error-de="imagen_respaldo_url" hidden></p>
+            </div>
+          </div>
+          <div class="vista-previa" id="vista-previa" aria-label="Vista previa de la imagen"></div>
+        </div>
+
+        <!-- <fieldset> agrupa controles relacionados; <legend> es su título -->
+        <fieldset class="form-casillas" id="casillas-plataformas">
+          <legend>Plataformas</legend>
+        </fieldset>
+      </div>
+
+      <footer class="modal-pie">
+        <button class="btn btn-fantasma" id="boton-cancelar" type="button">Cancelar</button>
+        <button class="btn btn-primario" id="boton-guardar" type="submit">Crear videojuego</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <!-- ================= DIÁLOGO DE CONFIRMACIÓN (reemplaza a confirm) ================= -->
+  <dialog class="modal modal-chico" id="dialogo-confirmar" aria-labelledby="titulo-confirmar">
+    <form method="dialog">
+      <header class="modal-encabezado">
+        <h2 class="modal-titulo" id="titulo-confirmar" data-titulo>Confirmar</h2>
+      </header>
+      <div class="modal-cuerpo">
+        <p class="mb-0" data-mensaje></p>
+      </div>
+      <footer class="modal-pie">
+        <button class="btn btn-fantasma" value="no" data-cancelar>Cancelar</button>
+        <button class="btn btn-peligro" value="si" data-confirmar>Confirmar</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+</body>
+</html>

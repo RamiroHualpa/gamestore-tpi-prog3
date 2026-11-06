@@ -1,0 +1,25 @@
+{
+  "titulo": "Super Mario Odyssey",
+  "descripcion": "Mario viaja por reinos muy distintos y usa su gorra para tomar el control de enemigos y objetos.",
+  "genero": "AVENTURA",
+  "anio_lanzamiento": 2017,
+  "precio": 48000.0,
+  "stock": 4,
+  "imagen_url": "img/juegos/super-mario-odyssey.svg",
+  "imagen_respaldo_url": null,
+  "estudio_id": 1,
+  "id": 5,
+  "activo": true,
+  "estudio": {
+    "nombre": "Nintendo",
+    "pais": "Japón",
+    "id": 1,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "Nintendo Switch",
+      "id": 4
+    }
+  ]
+}

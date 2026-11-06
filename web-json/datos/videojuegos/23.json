@@ -1,0 +1,33 @@
+{
+  "titulo": "XCOM 2",
+  "descripcion": "Táctica por turnos: una resistencia pequeña enfrenta a una ocupación alienígena.",
+  "genero": "ESTRATEGIA",
+  "anio_lanzamiento": 2016,
+  "precio": 18000.0,
+  "stock": 0,
+  "imagen_url": "img/juegos/xcom-2.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/268500/library_600x900.jpg",
+  "estudio_id": 12,
+  "id": 23,
+  "activo": true,
+  "estudio": {
+    "nombre": "Firaxis Games",
+    "pais": "Estados Unidos",
+    "id": 12,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    }
+  ]
+}

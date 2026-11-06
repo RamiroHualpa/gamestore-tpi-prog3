@@ -1,0 +1,25 @@
+{
+  "titulo": "Animal Crossing: New Horizons",
+  "descripcion": "Una isla desierta para decorar a gusto, con vecinos, estaciones del año y eventos en tiempo real.",
+  "genero": "AVENTURA",
+  "anio_lanzamiento": 2020,
+  "precio": 45000.0,
+  "stock": 0,
+  "imagen_url": "img/juegos/animal-crossing-new-horizons.svg",
+  "imagen_respaldo_url": null,
+  "estudio_id": 1,
+  "id": 6,
+  "activo": true,
+  "estudio": {
+    "nombre": "Nintendo",
+    "pais": "Japón",
+    "id": 1,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "Nintendo Switch",
+      "id": 4
+    }
+  ]
+}

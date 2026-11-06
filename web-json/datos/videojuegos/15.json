@@ -1,0 +1,33 @@
+{
+  "titulo": "Red Dead Redemption 2",
+  "descripcion": "Arthur Morgan y su banda huyen por el oeste norteamericano a fines del siglo XIX.",
+  "genero": "AVENTURA",
+  "anio_lanzamiento": 2018,
+  "precio": 42000.0,
+  "stock": 4,
+  "imagen_url": "img/juegos/red-dead-redemption-2.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/library_600x900.jpg",
+  "estudio_id": 8,
+  "id": 15,
+  "activo": true,
+  "estudio": {
+    "nombre": "Rockstar Games",
+    "pais": "Estados Unidos",
+    "id": 8,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    }
+  ]
+}

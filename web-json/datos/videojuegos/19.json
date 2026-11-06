@@ -1,0 +1,37 @@
+{
+  "titulo": "Minecraft",
+  "descripcion": "Un mundo hecho de bloques para construir, explorar y sobrevivir, solo o con amigos.",
+  "genero": "AVENTURA",
+  "anio_lanzamiento": 2011,
+  "precio": 20000.0,
+  "stock": 25,
+  "imagen_url": "img/juegos/minecraft.svg",
+  "imagen_respaldo_url": null,
+  "estudio_id": 10,
+  "id": 19,
+  "activo": true,
+  "estudio": {
+    "nombre": "Mojang Studios",
+    "pais": "Suecia",
+    "id": 10,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    },
+    {
+      "nombre": "Nintendo Switch",
+      "id": 4
+    }
+  ]
+}

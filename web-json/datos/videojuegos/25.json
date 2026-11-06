@@ -1,0 +1,37 @@
+{
+  "titulo": "Portal 2",
+  "descripcion": "Acertijos con portales, humor y un modo cooperativo para dos jugadores.",
+  "genero": "AVENTURA",
+  "anio_lanzamiento": 2011,
+  "precio": 6000.0,
+  "stock": 14,
+  "imagen_url": "img/juegos/portal-2.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/620/library_600x900.jpg",
+  "estudio_id": 13,
+  "id": 25,
+  "activo": true,
+  "estudio": {
+    "nombre": "Valve",
+    "pais": "Estados Unidos",
+    "id": 13,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    },
+    {
+      "nombre": "Nintendo Switch",
+      "id": 4
+    }
+  ]
+}

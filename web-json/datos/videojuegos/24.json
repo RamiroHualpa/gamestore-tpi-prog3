@@ -1,0 +1,25 @@
+{
+  "titulo": "Half-Life 2",
+  "descripcion": "Gordon Freeman vuelve a City 17. Física, acertijos y la famosa pistola de gravedad.",
+  "genero": "SHOOTER",
+  "anio_lanzamiento": 2004,
+  "precio": 6000.0,
+  "stock": 20,
+  "imagen_url": "img/juegos/half-life-2.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/220/library_600x900.jpg",
+  "estudio_id": 13,
+  "id": 24,
+  "activo": true,
+  "estudio": {
+    "nombre": "Valve",
+    "pais": "Estados Unidos",
+    "id": 13,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    }
+  ]
+}

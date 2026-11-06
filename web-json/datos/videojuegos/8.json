@@ -1,0 +1,33 @@
+{
+  "titulo": "Forza Horizon 5",
+  "descripcion": "Mundo abierto en México con cientos de autos, carreras en ruta, tierra y eventos en línea.",
+  "genero": "CARRERAS",
+  "anio_lanzamiento": 2021,
+  "precio": 45000.0,
+  "stock": 3,
+  "imagen_url": "img/juegos/forza-horizon-5.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1551360/library_600x900.jpg",
+  "estudio_id": 4,
+  "id": 8,
+  "activo": true,
+  "estudio": {
+    "nombre": "Playground Games",
+    "pais": "Reino Unido",
+    "id": 4,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    }
+  ]
+}

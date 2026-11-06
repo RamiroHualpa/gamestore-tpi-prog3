@@ -1,0 +1,33 @@
+{
+  "titulo": "Sekiro: Shadows Die Twice",
+  "descripcion": "Un shinobi en el Japón feudal, con duelos de espada en los que importa más desviar que atacar.",
+  "genero": "ACCION",
+  "anio_lanzamiento": 2019,
+  "precio": 35000.0,
+  "stock": 0,
+  "imagen_url": "img/juegos/sekiro-shadows-die-twice.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/814380/library_600x900.jpg",
+  "estudio_id": 6,
+  "id": 12,
+  "activo": true,
+  "estudio": {
+    "nombre": "FromSoftware",
+    "pais": "Japón",
+    "id": 6,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    }
+  ]
+}

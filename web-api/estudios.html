@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estudios y plataformas | GameStore</title>
+  <meta name="description" content="Panel para administrar los estudios y las plataformas del catálogo.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0a0c16">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;800&display=swap">
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <script type="module" src="js/admin-estudios.js"></script>
+</head>
+
+<body>
+  <a class="saltar-al-contenido" href="#contenido">Saltar al contenido</a>
+
+  <header class="navbar">
+    <div class="contenedor navbar-contenido">
+      <a class="navbar-marca" href="index.html" aria-label="GameStore, ir al inicio">
+        <img class="navbar-logo" src="img/favicon.svg" alt="" width="36" height="36">
+        GameStore
+      </a>
+      <button class="btn btn-fantasma btn-icono navbar-toggle" type="button"
+              aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">☰</button>
+      <nav aria-label="Principal">
+        <ul class="navbar-menu" id="menu-principal">
+          <li><a class="navbar-enlace" href="index.html">Catálogo</a></li>
+          <li><a class="navbar-enlace" href="admin.html">Administrar juegos</a></li>
+          <li><a class="navbar-enlace" href="estudios.html" aria-current="page">Estudios y plataformas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="seccion">
+    <div class="contenedor">
+      <div class="seccion-encabezado">
+        <div>
+          <h1 class="seccion-titulo">Estudios y plataformas</h1>
+          <p class="seccion-subtitulo">Los datos que usan el formulario de juegos y los filtros del catálogo.</p>
+        </div>
+      </div>
+
+      <div class="grilla-dos">
+        <!-- ===== Estudios ===== -->
+        <section class="panel" aria-labelledby="titulo-estudios">
+          <h2 id="titulo-estudios">Estudios</h2>
+
+          <form class="panel-form" id="form-estudio" aria-labelledby="titulo-form-estudio">
+            <h3 id="titulo-form-estudio">Agregar estudio</h3>
+            <div id="alerta-estudio" hidden></div>
+            <div class="form-fila">
+              <div class="form-grupo">
+                <label class="form-etiqueta" for="estudio-nombre">Nombre <span class="requerido" aria-hidden="true">*</span></label>
+                <input class="form-control" id="estudio-nombre" name="nombre" type="text" required minlength="2" maxlength="60">
+                <p class="form-error" data-error-de="nombre" hidden></p>
+              </div>
+              <div class="form-grupo">
+                <label class="form-etiqueta" for="estudio-pais">País (opcional)</label>
+                <input class="form-control" id="estudio-pais" name="pais" type="text" maxlength="40">
+                <p class="form-error" data-error-de="pais" hidden></p>
+              </div>
+            </div>
+            <div class="d-flex gap-1">
+              <button class="btn btn-primario" id="boton-estudio" type="submit">Agregar estudio</button>
+              <button class="btn btn-fantasma" id="cancelar-edicion" type="button" hidden>Cancelar edición</button>
+            </div>
+          </form>
+
+          <div class="tabla-contenedor mt-2">
+            <table class="tabla tabla-compacta">
+              <caption class="oculto-visual">Estudios activos</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">País</th>
+                  <th scope="col"><span class="oculto-visual">Acciones</span></th>
+                </tr>
+              </thead>
+              <tbody id="cuerpo-estudios"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ===== Plataformas ===== -->
+        <section class="panel" aria-labelledby="titulo-plataformas">
+          <h2 id="titulo-plataformas">Plataformas</h2>
+
+          <form class="panel-form" id="form-plataforma">
+            <h3>Agregar plataforma</h3>
+            <div id="alerta-plataforma" hidden></div>
+            <div class="form-grupo">
+              <label class="form-etiqueta" for="plataforma-nombre">Nombre <span class="requerido" aria-hidden="true">*</span></label>
+              <input class="form-control" id="plataforma-nombre" name="nombre" type="text" required minlength="2" maxlength="30">
+              <p class="form-error" data-error-de="nombre" hidden></p>
+            </div>
+            <button class="btn btn-primario" type="submit">Agregar plataforma</button>
+          </form>
+
+          <div class="tabla-contenedor mt-2">
+            <table class="tabla tabla-compacta">
+              <caption class="oculto-visual">Plataformas</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Nombre</th>
+                  <th scope="col"><span class="oculto-visual">Acciones</span></th>
+                </tr>
+              </thead>
+              <tbody id="cuerpo-plataformas"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-columnas">
+      <div>
+        <p class="mb-0"><strong>GameStore</strong> · Ejemplo de la Tecnicatura Universitaria en Programación</p>
+        <p class="mb-0"><small>&copy; <span id="anio-actual">2026</span> · Portadas ilustrativas, no son las originales.</small></p>
+      </div>
+      <nav aria-label="Pie de página">
+        <ul class="pie-enlaces">
+          <li><a href="index.html">Catálogo</a></li>
+          <li><a href="admin.html">Administrar juegos</a></li>
+          <li><a href="estudios.html">Estudios y plataformas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <dialog class="modal modal-chico" id="dialogo-confirmar" aria-labelledby="titulo-confirmar">
+    <form method="dialog">
+      <header class="modal-encabezado">
+        <h2 class="modal-titulo" id="titulo-confirmar" data-titulo>Confirmar</h2>
+      </header>
+      <div class="modal-cuerpo">
+        <p class="mb-0" data-mensaje></p>
+      </div>
+      <footer class="modal-pie">
+        <button class="btn btn-fantasma" value="no" data-cancelar>Cancelar</button>
+        <button class="btn btn-peligro" value="si" data-confirmar>Confirmar</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+</body>
+</html>

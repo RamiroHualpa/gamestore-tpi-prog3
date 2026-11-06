@@ -1,0 +1,29 @@
+{
+  "titulo": "God of War Ragnarök",
+  "descripcion": "Kratos y Atreus recorren los nueve reinos nórdicos antes del fin del mundo.",
+  "genero": "ACCION",
+  "anio_lanzamiento": 2022,
+  "precio": 55000.0,
+  "stock": 0,
+  "imagen_url": "img/juegos/god-of-war-ragnarök.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2322010/library_600x900.jpg",
+  "estudio_id": 3,
+  "id": 7,
+  "activo": true,
+  "estudio": {
+    "nombre": "Santa Monica Studio",
+    "pais": "Estados Unidos",
+    "id": 3,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    }
+  ]
+}

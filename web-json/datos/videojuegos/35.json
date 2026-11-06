@@ -1,0 +1,37 @@
+{
+  "titulo": "Terraria",
+  "descripcion": "Excavar, construir y pelear en un mundo en dos dimensiones lleno de jefes y objetos.",
+  "genero": "INDIE",
+  "anio_lanzamiento": 2011,
+  "precio": 6000.0,
+  "stock": 30,
+  "imagen_url": "img/juegos/terraria.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/105600/library_600x900.jpg",
+  "estudio_id": 18,
+  "id": 35,
+  "activo": true,
+  "estudio": {
+    "nombre": "Re-Logic",
+    "pais": "Estados Unidos",
+    "id": 18,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    },
+    {
+      "nombre": "Nintendo Switch",
+      "id": 4
+    }
+  ]
+}

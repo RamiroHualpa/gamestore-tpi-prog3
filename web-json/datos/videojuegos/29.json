@@ -1,0 +1,37 @@
+{
+  "titulo": "Divinity: Original Sin 2",
+  "descripcion": "Rol táctico con un sistema de elementos que se combinan: fuego, agua, veneno y electricidad.",
+  "genero": "RPG",
+  "anio_lanzamiento": 2017,
+  "precio": 26000.0,
+  "stock": 4,
+  "imagen_url": "img/juegos/divinity-original-sin-2.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/435150/library_600x900.jpg",
+  "estudio_id": 15,
+  "id": 29,
+  "activo": true,
+  "estudio": {
+    "nombre": "Larian Studios",
+    "pais": "Bélgica",
+    "id": 15,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    },
+    {
+      "nombre": "Nintendo Switch",
+      "id": 4
+    }
+  ]
+}

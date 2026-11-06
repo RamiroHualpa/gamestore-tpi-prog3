@@ -1,0 +1,7 @@
+# robots.txt - Qué pueden recorrer los buscadores.
+# Las páginas de administración quedan afuera (además llevan <meta name="robots" content="noindex">).
+User-agent: *
+Disallow: /gamestore-tpi-prog3/web-json/admin.html
+Disallow: /gamestore-tpi-prog3/web-json/estudios.html
+
+Sitemap: https://ramirohualpa.github.io/gamestore-tpi-prog3/web-json/sitemap.xml

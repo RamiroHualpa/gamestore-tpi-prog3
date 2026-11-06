@@ -1,0 +1,37 @@
+{
+  "titulo": "DOOM Eternal",
+  "descripcion": "Disparos frenéticos contra hordas de demonios, con movimiento rápido y música metal.",
+  "genero": "SHOOTER",
+  "anio_lanzamiento": 2020,
+  "precio": 25000.0,
+  "stock": 8,
+  "imagen_url": "img/juegos/doom-eternal.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/782330/library_600x900.jpg",
+  "estudio_id": 23,
+  "id": 40,
+  "activo": true,
+  "estudio": {
+    "nombre": "id Software",
+    "pais": "Estados Unidos",
+    "id": 23,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    },
+    {
+      "nombre": "Nintendo Switch",
+      "id": 4
+    }
+  ]
+}

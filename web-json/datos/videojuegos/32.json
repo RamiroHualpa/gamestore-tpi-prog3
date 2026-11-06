@@ -1,0 +1,33 @@
+{
+  "titulo": "Resident Evil 4",
+  "descripcion": "Leon Kennedy busca a la hija del presidente en un pueblo rural de España. Terror y acción.",
+  "genero": "ACCION",
+  "anio_lanzamiento": 2023,
+  "precio": 45000.0,
+  "stock": 5,
+  "imagen_url": "img/juegos/resident-evil-4.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2050650/library_600x900.jpg",
+  "estudio_id": 17,
+  "id": 32,
+  "activo": true,
+  "estudio": {
+    "nombre": "Capcom",
+    "pais": "Japón",
+    "id": 17,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    }
+  ]
+}

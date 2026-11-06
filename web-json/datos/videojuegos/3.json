@@ -1,0 +1,25 @@
+{
+  "titulo": "The Legend of Zelda: Tears of the Kingdom",
+  "descripcion": "Link recorre Hyrule por tierra y por las islas del cielo, construyendo vehículos con lo que encuentra.",
+  "genero": "AVENTURA",
+  "anio_lanzamiento": 2023,
+  "precio": 65000.0,
+  "stock": 2,
+  "imagen_url": "img/juegos/the-legend-of-zelda-tears-of-the-kingdom.svg",
+  "imagen_respaldo_url": null,
+  "estudio_id": 1,
+  "id": 3,
+  "activo": true,
+  "estudio": {
+    "nombre": "Nintendo",
+    "pais": "Japón",
+    "id": 1,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "Nintendo Switch",
+      "id": 4
+    }
+  ]
+}

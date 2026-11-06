@@ -1,0 +1,37 @@
+{
+  "titulo": "Dead Cells",
+  "descripcion": "Acción en un castillo que cambia en cada partida. Morir es parte del aprendizaje.",
+  "genero": "INDIE",
+  "anio_lanzamiento": 2018,
+  "precio": 10000.0,
+  "stock": 9,
+  "imagen_url": "img/juegos/dead-cells.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/588650/library_600x900.jpg",
+  "estudio_id": 19,
+  "id": 36,
+  "activo": true,
+  "estudio": {
+    "nombre": "Motion Twin",
+    "pais": "Francia",
+    "id": 19,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    },
+    {
+      "nombre": "Nintendo Switch",
+      "id": 4
+    }
+  ]
+}

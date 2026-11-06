@@ -1,0 +1,25 @@
+{
+  "titulo": "Mario Kart 8 Deluxe",
+  "descripcion": "Carreras con objetos, 48 circuitos y partidas de hasta cuatro jugadores en la misma pantalla.",
+  "genero": "CARRERAS",
+  "anio_lanzamiento": 2017,
+  "precio": 50000.0,
+  "stock": 6,
+  "imagen_url": "img/juegos/mario-kart-8-deluxe.svg",
+  "imagen_respaldo_url": null,
+  "estudio_id": 1,
+  "id": 4,
+  "activo": true,
+  "estudio": {
+    "nombre": "Nintendo",
+    "pais": "Japón",
+    "id": 1,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "Nintendo Switch",
+      "id": 4
+    }
+  ]
+}

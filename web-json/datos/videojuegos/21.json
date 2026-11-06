@@ -1,0 +1,29 @@
+{
+  "titulo": "Madden NFL 25",
+  "descripcion": "Fútbol americano con la liga profesional, jugadas tácticas y modo franquicia.",
+  "genero": "DEPORTES",
+  "anio_lanzamiento": 2024,
+  "precio": 52000.0,
+  "stock": 2,
+  "imagen_url": "img/juegos/madden-nfl-25.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2582560/library_600x900.jpg",
+  "estudio_id": 11,
+  "id": 21,
+  "activo": true,
+  "estudio": {
+    "nombre": "EA Sports",
+    "pais": "Canadá",
+    "id": 11,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    }
+  ]
+}

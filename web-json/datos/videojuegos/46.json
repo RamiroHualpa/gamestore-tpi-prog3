@@ -1,0 +1,37 @@
+{
+  "titulo": "NBA 2K25",
+  "descripcion": "Básquet profesional con modo carrera, equipos actuales y leyendas de la liga.",
+  "genero": "DEPORTES",
+  "anio_lanzamiento": 2024,
+  "precio": 55000.0,
+  "stock": 6,
+  "imagen_url": "img/juegos/nba-2k25.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2878980/library_600x900.jpg",
+  "estudio_id": 27,
+  "id": 46,
+  "activo": true,
+  "estudio": {
+    "nombre": "Visual Concepts",
+    "pais": "Estados Unidos",
+    "id": 27,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    },
+    {
+      "nombre": "Nintendo Switch",
+      "id": 4
+    }
+  ]
+}

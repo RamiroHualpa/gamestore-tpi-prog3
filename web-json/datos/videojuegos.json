@@ -1,0 +1,1455 @@
+[
+  {
+    "titulo": "Hollow Knight",
+    "descripcion": "Un caballero explora un reino de insectos en ruinas. Plataformas, combate exigente y un mapa enorme para descubrir.",
+    "genero": "INDIE",
+    "anio_lanzamiento": 2017,
+    "precio": 9000.0,
+    "stock": 5,
+    "imagen_url": "img/juegos/hollow-knight.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/367520/library_600x900.jpg",
+    "estudio_id": 2,
+    "id": 1,
+    "activo": true,
+    "estudio": {
+      "nombre": "Team Cherry",
+      "pais": "Australia",
+      "id": 2,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      },
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "Hollow Knight: Silksong",
+    "descripcion": "Hornet escala un reino desconocido con nuevas habilidades, herramientas y enemigos más rápidos.",
+    "genero": "INDIE",
+    "anio_lanzamiento": 2025,
+    "precio": 15000.0,
+    "stock": 12,
+    "imagen_url": "img/juegos/hollow-knight-silksong.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1030300/library_600x900.jpg",
+    "estudio_id": 2,
+    "id": 2,
+    "activo": true,
+    "estudio": {
+      "nombre": "Team Cherry",
+      "pais": "Australia",
+      "id": 2,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      },
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "The Legend of Zelda: Tears of the Kingdom",
+    "descripcion": "Link recorre Hyrule por tierra y por las islas del cielo, construyendo vehículos con lo que encuentra.",
+    "genero": "AVENTURA",
+    "anio_lanzamiento": 2023,
+    "precio": 65000.0,
+    "stock": 2,
+    "imagen_url": "img/juegos/the-legend-of-zelda-tears-of-the-kingdom.svg",
+    "imagen_respaldo_url": null,
+    "estudio_id": 1,
+    "id": 3,
+    "activo": true,
+    "estudio": {
+      "nombre": "Nintendo",
+      "pais": "Japón",
+      "id": 1,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "Mario Kart 8 Deluxe",
+    "descripcion": "Carreras con objetos, 48 circuitos y partidas de hasta cuatro jugadores en la misma pantalla.",
+    "genero": "CARRERAS",
+    "anio_lanzamiento": 2017,
+    "precio": 50000.0,
+    "stock": 6,
+    "imagen_url": "img/juegos/mario-kart-8-deluxe.svg",
+    "imagen_respaldo_url": null,
+    "estudio_id": 1,
+    "id": 4,
+    "activo": true,
+    "estudio": {
+      "nombre": "Nintendo",
+      "pais": "Japón",
+      "id": 1,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "Super Mario Odyssey",
+    "descripcion": "Mario viaja por reinos muy distintos y usa su gorra para tomar el control de enemigos y objetos.",
+    "genero": "AVENTURA",
+    "anio_lanzamiento": 2017,
+    "precio": 48000.0,
+    "stock": 4,
+    "imagen_url": "img/juegos/super-mario-odyssey.svg",
+    "imagen_respaldo_url": null,
+    "estudio_id": 1,
+    "id": 5,
+    "activo": true,
+    "estudio": {
+      "nombre": "Nintendo",
+      "pais": "Japón",
+      "id": 1,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "Animal Crossing: New Horizons",
+    "descripcion": "Una isla desierta para decorar a gusto, con vecinos, estaciones del año y eventos en tiempo real.",
+    "genero": "AVENTURA",
+    "anio_lanzamiento": 2020,
+    "precio": 45000.0,
+    "stock": 0,
+    "imagen_url": "img/juegos/animal-crossing-new-horizons.svg",
+    "imagen_respaldo_url": null,
+    "estudio_id": 1,
+    "id": 6,
+    "activo": true,
+    "estudio": {
+      "nombre": "Nintendo",
+      "pais": "Japón",
+      "id": 1,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "God of War Ragnarök",
+    "descripcion": "Kratos y Atreus recorren los nueve reinos nórdicos antes del fin del mundo.",
+    "genero": "ACCION",
+    "anio_lanzamiento": 2022,
+    "precio": 55000.0,
+    "stock": 0,
+    "imagen_url": "img/juegos/god-of-war-ragnarök.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2322010/library_600x900.jpg",
+    "estudio_id": 3,
+    "id": 7,
+    "activo": true,
+    "estudio": {
+      "nombre": "Santa Monica Studio",
+      "pais": "Estados Unidos",
+      "id": 3,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      }
+    ]
+  },
+  {
+    "titulo": "Forza Horizon 5",
+    "descripcion": "Mundo abierto en México con cientos de autos, carreras en ruta, tierra y eventos en línea.",
+    "genero": "CARRERAS",
+    "anio_lanzamiento": 2021,
+    "precio": 45000.0,
+    "stock": 3,
+    "imagen_url": "img/juegos/forza-horizon-5.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1551360/library_600x900.jpg",
+    "estudio_id": 4,
+    "id": 8,
+    "activo": true,
+    "estudio": {
+      "nombre": "Playground Games",
+      "pais": "Reino Unido",
+      "id": 4,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      }
+    ]
+  },
+  {
+    "titulo": "Stardew Valley",
+    "descripcion": "Una granja heredada, un pueblo con historias propias y temporadas para sembrar, pescar y explorar minas.",
+    "genero": "INDIE",
+    "anio_lanzamiento": 2016,
+    "precio": 7000.0,
+    "stock": 10,
+    "imagen_url": "img/juegos/stardew-valley.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/413150/library_600x900.jpg",
+    "estudio_id": 5,
+    "id": 9,
+    "activo": true,
+    "estudio": {
+      "nombre": "ConcernedApe",
+      "pais": "Estados Unidos",
+      "id": 5,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      },
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "Elden Ring",
+    "descripcion": "Rol de acción en un mundo abierto oscuro, con jefes enormes y libertad para elegir el camino.",
+    "genero": "RPG",
+    "anio_lanzamiento": 2022,
+    "precio": 60000.0,
+    "stock": 7,
+    "imagen_url": "img/juegos/elden-ring.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/library_600x900.jpg",
+    "estudio_id": 6,
+    "id": 10,
+    "activo": true,
+    "estudio": {
+      "nombre": "FromSoftware",
+      "pais": "Japón",
+      "id": 6,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      }
+    ]
+  },
+  {
+    "titulo": "Dark Souls III",
+    "descripcion": "Combate preciso y castigador en un reino que se apaga. Cada derrota enseña algo.",
+    "genero": "RPG",
+    "anio_lanzamiento": 2016,
+    "precio": 30000.0,
+    "stock": 3,
+    "imagen_url": "img/juegos/dark-souls-iii.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/374320/library_600x900.jpg",
+    "estudio_id": 6,
+    "id": 11,
+    "activo": true,
+    "estudio": {
+      "nombre": "FromSoftware",
+      "pais": "Japón",
+      "id": 6,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      }
+    ]
+  },
+  {
+    "titulo": "Sekiro: Shadows Die Twice",
+    "descripcion": "Un shinobi en el Japón feudal, con duelos de espada en los que importa más desviar que atacar.",
+    "genero": "ACCION",
+    "anio_lanzamiento": 2019,
+    "precio": 35000.0,
+    "stock": 0,
+    "imagen_url": "img/juegos/sekiro-shadows-die-twice.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/814380/library_600x900.jpg",
+    "estudio_id": 6,
+    "id": 12,
+    "activo": true,
+    "estudio": {
+      "nombre": "FromSoftware",
+      "pais": "Japón",
+      "id": 6,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      }
+    ]
+  },
+  {
+    "titulo": "The Witcher 3: Wild Hunt",
+    "descripcion": "Geralt busca a Ciri en un mundo abierto lleno de contratos de monstruos y decisiones con consecuencias.",
+    "genero": "RPG",
+    "anio_lanzamiento": 2015,
+    "precio": 25000.0,
+    "stock": 9,
+    "imagen_url": "img/juegos/the-witcher-3-wild-hunt.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/library_600x900.jpg",
+    "estudio_id": 7,
+    "id": 13,
+    "activo": true,
+    "estudio": {
+      "nombre": "CD Projekt Red",
+      "pais": "Polonia",
+      "id": 7,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      },
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "Cyberpunk 2077",
+    "descripcion": "Rol en primera persona en Night City, una ciudad futurista de implantes, bandas y corporaciones.",
+    "genero": "RPG",
+    "anio_lanzamiento": 2020,
+    "precio": 40000.0,
+    "stock": 5,
+    "imagen_url": "img/juegos/cyberpunk-2077.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/library_600x900.jpg",
+    "estudio_id": 7,
+    "id": 14,
+    "activo": true,
+    "estudio": {
+      "nombre": "CD Projekt Red",
+      "pais": "Polonia",
+      "id": 7,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      }
+    ]
+  },
+  {
+    "titulo": "Red Dead Redemption 2",
+    "descripcion": "Arthur Morgan y su banda huyen por el oeste norteamericano a fines del siglo XIX.",
+    "genero": "AVENTURA",
+    "anio_lanzamiento": 2018,
+    "precio": 42000.0,
+    "stock": 4,
+    "imagen_url": "img/juegos/red-dead-redemption-2.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/library_600x900.jpg",
+    "estudio_id": 8,
+    "id": 15,
+    "activo": true,
+    "estudio": {
+      "nombre": "Rockstar Games",
+      "pais": "Estados Unidos",
+      "id": 8,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      }
+    ]
+  },
+  {
+    "titulo": "Grand Theft Auto V",
+    "descripcion": "Tres protagonistas, una ciudad enorme y golpes planificados paso a paso.",
+    "genero": "ACCION",
+    "anio_lanzamiento": 2013,
+    "precio": 30000.0,
+    "stock": 15,
+    "imagen_url": "img/juegos/grand-theft-auto-v.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/271590/library_600x900.jpg",
+    "estudio_id": 8,
+    "id": 16,
+    "activo": true,
+    "estudio": {
+      "nombre": "Rockstar Games",
+      "pais": "Estados Unidos",
+      "id": 8,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      }
+    ]
+  },
+  {
+    "titulo": "Hades",
+    "descripcion": "Zagreo intenta escapar del inframundo. Cada intento es distinto y la historia avanza con cada muerte.",
+    "genero": "INDIE",
+    "anio_lanzamiento": 2020,
+    "precio": 12000.0,
+    "stock": 8,
+    "imagen_url": "img/juegos/hades.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1145360/library_600x900.jpg",
+    "estudio_id": 9,
+    "id": 17,
+    "activo": true,
+    "estudio": {
+      "nombre": "Supergiant Games",
+      "pais": "Estados Unidos",
+      "id": 9,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      },
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "Hades II",
+    "descripcion": "Melinoe, hermana de Zagreo, enfrenta al titán del tiempo con magia y armas nuevas.",
+    "genero": "INDIE",
+    "anio_lanzamiento": 2025,
+    "precio": 18000.0,
+    "stock": 6,
+    "imagen_url": "img/juegos/hades-ii.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1145350/library_600x900.jpg",
+    "estudio_id": 9,
+    "id": 18,
+    "activo": true,
+    "estudio": {
+      "nombre": "Supergiant Games",
+      "pais": "Estados Unidos",
+      "id": 9,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "Minecraft",
+    "descripcion": "Un mundo hecho de bloques para construir, explorar y sobrevivir, solo o con amigos.",
+    "genero": "AVENTURA",
+    "anio_lanzamiento": 2011,
+    "precio": 20000.0,
+    "stock": 25,
+    "imagen_url": "img/juegos/minecraft.svg",
+    "imagen_respaldo_url": null,
+    "estudio_id": 10,
+    "id": 19,
+    "activo": true,
+    "estudio": {
+      "nombre": "Mojang Studios",
+      "pais": "Suecia",
+      "id": 10,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      },
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "EA Sports FC 25",
+    "descripcion": "Fútbol con ligas y equipos licenciados, modo carrera y partidos en línea.",
+    "genero": "DEPORTES",
+    "anio_lanzamiento": 2024,
+    "precio": 58000.0,
+    "stock": 10,
+    "imagen_url": "img/juegos/ea-sports-fc-25.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2669320/library_600x900.jpg",
+    "estudio_id": 11,
+    "id": 20,
+    "activo": true,
+    "estudio": {
+      "nombre": "EA Sports",
+      "pais": "Canadá",
+      "id": 11,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      },
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "Madden NFL 25",
+    "descripcion": "Fútbol americano con la liga profesional, jugadas tácticas y modo franquicia.",
+    "genero": "DEPORTES",
+    "anio_lanzamiento": 2024,
+    "precio": 52000.0,
+    "stock": 2,
+    "imagen_url": "img/juegos/madden-nfl-25.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2582560/library_600x900.jpg",
+    "estudio_id": 11,
+    "id": 21,
+    "activo": true,
+    "estudio": {
+      "nombre": "EA Sports",
+      "pais": "Canadá",
+      "id": 11,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      }
+    ]
+  },
+  {
+    "titulo": "Sid Meier's Civilization VI",
+    "descripcion": "Estrategia por turnos: una civilización crece desde la edad de piedra hasta la era de la información.",
+    "genero": "ESTRATEGIA",
+    "anio_lanzamiento": 2016,
+    "precio": 22000.0,
+    "stock": 6,
+    "imagen_url": "img/juegos/sid-meier-s-civilization-vi.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/289070/library_600x900.jpg",
+    "estudio_id": 12,
+    "id": 22,
+    "activo": true,
+    "estudio": {
+      "nombre": "Firaxis Games",
+      "pais": "Estados Unidos",
+      "id": 12,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      },
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "XCOM 2",
+    "descripcion": "Táctica por turnos: una resistencia pequeña enfrenta a una ocupación alienígena.",
+    "genero": "ESTRATEGIA",
+    "anio_lanzamiento": 2016,
+    "precio": 18000.0,
+    "stock": 0,
+    "imagen_url": "img/juegos/xcom-2.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/268500/library_600x900.jpg",
+    "estudio_id": 12,
+    "id": 23,
+    "activo": true,
+    "estudio": {
+      "nombre": "Firaxis Games",
+      "pais": "Estados Unidos",
+      "id": 12,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      }
+    ]
+  },
+  {
+    "titulo": "Half-Life 2",
+    "descripcion": "Gordon Freeman vuelve a City 17. Física, acertijos y la famosa pistola de gravedad.",
+    "genero": "SHOOTER",
+    "anio_lanzamiento": 2004,
+    "precio": 6000.0,
+    "stock": 20,
+    "imagen_url": "img/juegos/half-life-2.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/220/library_600x900.jpg",
+    "estudio_id": 13,
+    "id": 24,
+    "activo": true,
+    "estudio": {
+      "nombre": "Valve",
+      "pais": "Estados Unidos",
+      "id": 13,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      }
+    ]
+  },
+  {
+    "titulo": "Portal 2",
+    "descripcion": "Acertijos con portales, humor y un modo cooperativo para dos jugadores.",
+    "genero": "AVENTURA",
+    "anio_lanzamiento": 2011,
+    "precio": 6000.0,
+    "stock": 14,
+    "imagen_url": "img/juegos/portal-2.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/620/library_600x900.jpg",
+    "estudio_id": 13,
+    "id": 25,
+    "activo": true,
+    "estudio": {
+      "nombre": "Valve",
+      "pais": "Estados Unidos",
+      "id": 13,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      },
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "Marvel's Spider-Man 2",
+    "descripcion": "Peter Parker y Miles Morales se balancean por Nueva York en una historia para dos héroes.",
+    "genero": "ACCION",
+    "anio_lanzamiento": 2023,
+    "precio": 62000.0,
+    "stock": 5,
+    "imagen_url": "img/juegos/marvel-s-spider-man-2.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/library_600x900.jpg",
+    "estudio_id": 14,
+    "id": 26,
+    "activo": true,
+    "estudio": {
+      "nombre": "Insomniac Games",
+      "pais": "Estados Unidos",
+      "id": 14,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      }
+    ]
+  },
+  {
+    "titulo": "Ratchet & Clank: Rift Apart",
+    "descripcion": "Saltos entre dimensiones, armas creativas y una aventura para toda la familia.",
+    "genero": "ACCION",
+    "anio_lanzamiento": 2021,
+    "precio": 40000.0,
+    "stock": 3,
+    "imagen_url": "img/juegos/ratchet-clank-rift-apart.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1895880/library_600x900.jpg",
+    "estudio_id": 14,
+    "id": 27,
+    "activo": true,
+    "estudio": {
+      "nombre": "Insomniac Games",
+      "pais": "Estados Unidos",
+      "id": 14,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      }
+    ]
+  },
+  {
+    "titulo": "Baldur's Gate 3",
+    "descripcion": "Rol por turnos basado en Dungeons & Dragons, con un grupo de compañeros y decisiones que cambian todo.",
+    "genero": "RPG",
+    "anio_lanzamiento": 2023,
+    "precio": 52000.0,
+    "stock": 8,
+    "imagen_url": "img/juegos/baldur-s-gate-3.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/library_600x900.jpg",
+    "estudio_id": 15,
+    "id": 28,
+    "activo": true,
+    "estudio": {
+      "nombre": "Larian Studios",
+      "pais": "Bélgica",
+      "id": 15,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      }
+    ]
+  },
+  {
+    "titulo": "Divinity: Original Sin 2",
+    "descripcion": "Rol táctico con un sistema de elementos que se combinan: fuego, agua, veneno y electricidad.",
+    "genero": "RPG",
+    "anio_lanzamiento": 2017,
+    "precio": 26000.0,
+    "stock": 4,
+    "imagen_url": "img/juegos/divinity-original-sin-2.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/435150/library_600x900.jpg",
+    "estudio_id": 15,
+    "id": 29,
+    "activo": true,
+    "estudio": {
+      "nombre": "Larian Studios",
+      "pais": "Bélgica",
+      "id": 15,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      },
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "Assassin's Creed Valhalla",
+    "descripcion": "Eivor lidera un clan vikingo que llega a Inglaterra en busca de un nuevo hogar.",
+    "genero": "ACCION",
+    "anio_lanzamiento": 2020,
+    "precio": 35000.0,
+    "stock": 6,
+    "imagen_url": "img/juegos/assassin-s-creed-valhalla.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2208920/library_600x900.jpg",
+    "estudio_id": 16,
+    "id": 30,
+    "activo": true,
+    "estudio": {
+      "nombre": "Ubisoft",
+      "pais": "Francia",
+      "id": 16,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      }
+    ]
+  },
+  {
+    "titulo": "Resident Evil 4",
+    "descripcion": "Leon Kennedy busca a la hija del presidente en un pueblo rural de España. Terror y acción.",
+    "genero": "ACCION",
+    "anio_lanzamiento": 2023,
+    "precio": 45000.0,
+    "stock": 5,
+    "imagen_url": "img/juegos/resident-evil-4.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2050650/library_600x900.jpg",
+    "estudio_id": 17,
+    "id": 32,
+    "activo": true,
+    "estudio": {
+      "nombre": "Capcom",
+      "pais": "Japón",
+      "id": 17,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      }
+    ]
+  },
+  {
+    "titulo": "Monster Hunter: World",
+    "descripcion": "Cacerías de monstruos gigantes, solo o en grupo, para fabricar mejores armas y armaduras.",
+    "genero": "ACCION",
+    "anio_lanzamiento": 2018,
+    "precio": 28000.0,
+    "stock": 7,
+    "imagen_url": "img/juegos/monster-hunter-world.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/582010/library_600x900.jpg",
+    "estudio_id": 17,
+    "id": 33,
+    "activo": true,
+    "estudio": {
+      "nombre": "Capcom",
+      "pais": "Japón",
+      "id": 17,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      }
+    ]
+  },
+  {
+    "titulo": "Street Fighter 6",
+    "descripcion": "Lucha uno contra uno con un modo historia en mundo abierto y controles para principiantes.",
+    "genero": "ACCION",
+    "anio_lanzamiento": 2023,
+    "precio": 40000.0,
+    "stock": 0,
+    "imagen_url": "img/juegos/street-fighter-6.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1364780/library_600x900.jpg",
+    "estudio_id": 17,
+    "id": 34,
+    "activo": true,
+    "estudio": {
+      "nombre": "Capcom",
+      "pais": "Japón",
+      "id": 17,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      }
+    ]
+  },
+  {
+    "titulo": "Terraria",
+    "descripcion": "Excavar, construir y pelear en un mundo en dos dimensiones lleno de jefes y objetos.",
+    "genero": "INDIE",
+    "anio_lanzamiento": 2011,
+    "precio": 6000.0,
+    "stock": 30,
+    "imagen_url": "img/juegos/terraria.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/105600/library_600x900.jpg",
+    "estudio_id": 18,
+    "id": 35,
+    "activo": true,
+    "estudio": {
+      "nombre": "Re-Logic",
+      "pais": "Estados Unidos",
+      "id": 18,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      },
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "Dead Cells",
+    "descripcion": "Acción en un castillo que cambia en cada partida. Morir es parte del aprendizaje.",
+    "genero": "INDIE",
+    "anio_lanzamiento": 2018,
+    "precio": 10000.0,
+    "stock": 9,
+    "imagen_url": "img/juegos/dead-cells.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/588650/library_600x900.jpg",
+    "estudio_id": 19,
+    "id": 36,
+    "activo": true,
+    "estudio": {
+      "nombre": "Motion Twin",
+      "pais": "Francia",
+      "id": 19,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      },
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "Gran Turismo 7",
+    "descripcion": "Simulador de manejo con cientos de autos reales, circuitos famosos y un museo del automóvil.",
+    "genero": "CARRERAS",
+    "anio_lanzamiento": 2022,
+    "precio": 55000.0,
+    "stock": 4,
+    "imagen_url": null,
+    "imagen_respaldo_url": null,
+    "estudio_id": 20,
+    "id": 37,
+    "activo": true,
+    "estudio": {
+      "nombre": "Polyphony Digital",
+      "pais": "Japón",
+      "id": 20,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      }
+    ]
+  },
+  {
+    "titulo": "Forza Motorsport",
+    "descripcion": "Simulador de carreras en circuito, con daño realista y mejoras para cada auto.",
+    "genero": "CARRERAS",
+    "anio_lanzamiento": 2023,
+    "precio": 50000.0,
+    "stock": 2,
+    "imagen_url": "img/juegos/forza-motorsport.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2440510/library_600x900.jpg",
+    "estudio_id": 21,
+    "id": 38,
+    "activo": true,
+    "estudio": {
+      "nombre": "Turn 10 Studios",
+      "pais": "Estados Unidos",
+      "id": 21,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      }
+    ]
+  },
+  {
+    "titulo": "Halo Infinite",
+    "descripcion": "El Jefe Maestro vuelve en una campaña semiabierta y un modo multijugador por equipos.",
+    "genero": "SHOOTER",
+    "anio_lanzamiento": 2021,
+    "precio": 30000.0,
+    "stock": 6,
+    "imagen_url": "img/juegos/halo-infinite.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1240440/library_600x900.jpg",
+    "estudio_id": 22,
+    "id": 39,
+    "activo": true,
+    "estudio": {
+      "nombre": "343 Industries",
+      "pais": "Estados Unidos",
+      "id": 22,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      }
+    ]
+  },
+  {
+    "titulo": "DOOM Eternal",
+    "descripcion": "Disparos frenéticos contra hordas de demonios, con movimiento rápido y música metal.",
+    "genero": "SHOOTER",
+    "anio_lanzamiento": 2020,
+    "precio": 25000.0,
+    "stock": 8,
+    "imagen_url": "img/juegos/doom-eternal.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/782330/library_600x900.jpg",
+    "estudio_id": 23,
+    "id": 40,
+    "activo": true,
+    "estudio": {
+      "nombre": "id Software",
+      "pais": "Estados Unidos",
+      "id": 23,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      },
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "Celeste",
+    "descripcion": "Madeline sube una montaña en un juego de plataformas preciso que habla de ansiedad y superación.",
+    "genero": "INDIE",
+    "anio_lanzamiento": 2018,
+    "precio": 7000.0,
+    "stock": 12,
+    "imagen_url": "img/juegos/celeste.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/504230/library_600x900.jpg",
+    "estudio_id": 24,
+    "id": 41,
+    "activo": true,
+    "estudio": {
+      "nombre": "Extremely OK Games",
+      "pais": "Canadá",
+      "id": 24,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      },
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "Age of Empires IV",
+    "descripcion": "Estrategia en tiempo real con civilizaciones históricas, asedios y campañas documentales.",
+    "genero": "ESTRATEGIA",
+    "anio_lanzamiento": 2021,
+    "precio": 30000.0,
+    "stock": 5,
+    "imagen_url": "img/juegos/age-of-empires-iv.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1466860/library_600x900.jpg",
+    "estudio_id": 25,
+    "id": 42,
+    "activo": true,
+    "estudio": {
+      "nombre": "Relic Entertainment",
+      "pais": "Canadá",
+      "id": 25,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      }
+    ]
+  },
+  {
+    "titulo": "Super Smash Bros. Ultimate",
+    "descripcion": "Lucha para hasta ocho jugadores con personajes de muchas sagas distintas.",
+    "genero": "ACCION",
+    "anio_lanzamiento": 2018,
+    "precio": 52000.0,
+    "stock": 5,
+    "imagen_url": "img/juegos/super-smash-bros-ultimate.svg",
+    "imagen_respaldo_url": null,
+    "estudio_id": 1,
+    "id": 43,
+    "activo": true,
+    "estudio": {
+      "nombre": "Nintendo",
+      "pais": "Japón",
+      "id": 1,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "Pikmin 4",
+    "descripcion": "Un equipo de pequeñas criaturas ayuda a explorar un planeta misterioso y rescatar náufragos.",
+    "genero": "ESTRATEGIA",
+    "anio_lanzamiento": 2023,
+    "precio": 48000.0,
+    "stock": 3,
+    "imagen_url": "img/juegos/pikmin-4.svg",
+    "imagen_respaldo_url": null,
+    "estudio_id": 1,
+    "id": 44,
+    "activo": true,
+    "estudio": {
+      "nombre": "Nintendo",
+      "pais": "Japón",
+      "id": 1,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "Rocket League",
+    "descripcion": "Fútbol con autos que saltan y vuelan. Partidas cortas, en equipo y muy competitivas.",
+    "genero": "DEPORTES",
+    "anio_lanzamiento": 2015,
+    "precio": 9000.0,
+    "stock": 20,
+    "imagen_url": "img/juegos/rocket-league.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/252950/library_600x900.jpg",
+    "estudio_id": 26,
+    "id": 45,
+    "activo": true,
+    "estudio": {
+      "nombre": "Psyonix",
+      "pais": "Estados Unidos",
+      "id": 26,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      },
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "titulo": "NBA 2K25",
+    "descripcion": "Básquet profesional con modo carrera, equipos actuales y leyendas de la liga.",
+    "genero": "DEPORTES",
+    "anio_lanzamiento": 2024,
+    "precio": 55000.0,
+    "stock": 6,
+    "imagen_url": "img/juegos/nba-2k25.webp",
+    "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2878980/library_600x900.jpg",
+    "estudio_id": 27,
+    "id": 46,
+    "activo": true,
+    "estudio": {
+      "nombre": "Visual Concepts",
+      "pais": "Estados Unidos",
+      "id": 27,
+      "activo": true
+    },
+    "plataformas": [
+      {
+        "nombre": "PC",
+        "id": 1
+      },
+      {
+        "nombre": "PlayStation",
+        "id": 2
+      },
+      {
+        "nombre": "Xbox",
+        "id": 3
+      },
+      {
+        "nombre": "Nintendo Switch",
+        "id": 4
+      }
+    ]
+  }
+]

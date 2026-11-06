@@ -1,0 +1,37 @@
+{
+  "titulo": "Sid Meier's Civilization VI",
+  "descripcion": "Estrategia por turnos: una civilización crece desde la edad de piedra hasta la era de la información.",
+  "genero": "ESTRATEGIA",
+  "anio_lanzamiento": 2016,
+  "precio": 22000.0,
+  "stock": 6,
+  "imagen_url": "img/juegos/sid-meier-s-civilization-vi.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/289070/library_600x900.jpg",
+  "estudio_id": 12,
+  "id": 22,
+  "activo": true,
+  "estudio": {
+    "nombre": "Firaxis Games",
+    "pais": "Estados Unidos",
+    "id": 12,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    },
+    {
+      "nombre": "Nintendo Switch",
+      "id": 4
+    }
+  ]
+}

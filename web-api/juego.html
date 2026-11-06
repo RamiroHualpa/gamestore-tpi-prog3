@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Valores iniciales: detalle.js los reemplaza con los datos del juego -->
+  <title>Detalle del juego | GameStore</title>
+  <meta name="description" content="Ficha del videojuego: descripción, precio, stock, estudio y plataformas.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gamestore.example/juego.html">
+
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="GameStore">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="Detalle del juego | GameStore">
+  <meta property="og:image" content="https://gamestore.example/img/compartir.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0a0c16">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;800&display=swap">
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <script type="module" src="js/detalle.js"></script>
+</head>
+
+<body>
+  <a class="saltar-al-contenido" href="#contenido">Saltar al contenido</a>
+
+  <header class="navbar">
+    <div class="contenedor navbar-contenido">
+      <a class="navbar-marca" href="index.html" aria-label="GameStore, ir al inicio">
+        <img class="navbar-logo" src="img/favicon.svg" alt="" width="36" height="36">
+        GameStore
+      </a>
+      <button class="btn btn-fantasma btn-icono navbar-toggle" type="button"
+              aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">☰</button>
+      <nav aria-label="Principal">
+        <ul class="navbar-menu" id="menu-principal">
+          <li><a class="navbar-enlace" href="index.html">Catálogo</a></li>
+          <li><a class="navbar-enlace" href="admin.html">Administrar juegos</a></li>
+          <li><a class="navbar-enlace" href="estudios.html">Estudios y plataformas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="seccion">
+    <div class="contenedor">
+      <!-- Migas de pan: muestran dónde está el usuario dentro del sitio -->
+      <nav class="migas" aria-label="Ubicación">
+        <ol>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#catalogo">Catálogo</a></li>
+          <li aria-current="page" id="miga-actual">Juego</li>
+        </ol>
+      </nav>
+
+      <div class="estado" id="estado-detalle" hidden></div>
+
+      <!-- <article>: contenido que tiene sentido por sí solo (la ficha de un juego) -->
+      <article class="detalle" id="detalle" hidden></article>
+
+      <section class="seccion" id="relacionados" aria-labelledby="titulo-relacionados" hidden>
+        <h2 id="titulo-relacionados">Más del estudio</h2>
+        <div class="grilla-tarjetas" id="grilla-relacionados"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-columnas">
+      <div>
+        <p class="mb-0"><strong>GameStore</strong> · Ejemplo de la Tecnicatura Universitaria en Programación</p>
+        <p class="mb-0"><small>&copy; <span id="anio-actual">2026</span> · Portadas ilustrativas, no son las originales.</small></p>
+      </div>
+      <nav aria-label="Pie de página">
+        <ul class="pie-enlaces">
+          <li><a href="index.html">Catálogo</a></li>
+          <li><a href="admin.html">Administrar juegos</a></li>
+          <li><a href="estudios.html">Estudios y plataformas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+</body>
+</html>

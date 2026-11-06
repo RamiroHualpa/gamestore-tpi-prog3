@@ -1,0 +1,1370 @@
+/* =====================================================================
+   GameStore - estilos.css
+   Una sola hoja de estilos, ordenada de lo general a lo particular:
+
+     1. Variables (colores, medidas, tiempos)
+     2. Base (reset y etiquetas sueltas)
+     3. Estructura (contenedor, secciones, grillas)
+     4. Componentes, cada uno con su bloque:
+        navbar · hero · botones · insignias · chips · tarjeta · formularios ·
+        tabla · modal · alertas · toasts · estados · esqueleto · paginación ·
+        migas · ficha · métricas · código · pie
+     5. Utilidades (clases chicas de un solo uso)
+     6. Animaciones
+     7. Celular y accesibilidad
+
+   Los nombres siguen la idea de Bootstrap: una clase base y variantes
+   que se suman.  Ejemplo:  <button class="btn btn-primario btn-chico">
+   ===================================================================== */
+
+
+/* =====================================================================
+   1. VARIABLES
+   Para cambiar el aspecto de toda la web alcanza con tocar estos valores.
+   ===================================================================== */
+:root {
+  /* Fondos y superficies */
+  --color-fondo: #0a0c16;
+  --color-superficie: #12162a;
+  --color-superficie-2: #1a2038;
+  --color-borde: #2a3152;
+
+  /* Texto */
+  --color-texto: #eceffd;
+  --color-texto-suave: #a3abcf;
+  --color-texto-tenue: #6f789f;
+
+  /* Colores de marca y de estado */
+  --color-primario: #7c5cff;
+  --color-primario-hover: #6845ff;
+  --color-secundario: #22d3ee;
+  --color-exito: #22c55e;
+  --color-peligro: #f43f5e;
+  --color-advertencia: #f59e0b;
+
+  /* Degradados */
+  --degradado-marca: linear-gradient(135deg, #7c5cff 0%, #22d3ee 100%);
+  --degradado-fondo: radial-gradient(1200px 600px at 10% -10%, rgba(124, 92, 255, 0.25), transparent 60%),
+                     radial-gradient(900px 500px at 100% 0%, rgba(34, 211, 238, 0.15), transparent 60%);
+
+  /* Tipografía */
+  --fuente-titulos: "Outfit", "Segoe UI", system-ui, sans-serif;
+  --fuente-texto: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  --fuente-codigo: "Cascadia Code", Consolas, "Courier New", monospace;
+
+  /* Medidas */
+  --radio-chico: 8px;
+  --radio: 14px;
+  --radio-grande: 22px;
+  --sombra: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --sombra-brillo: 0 0 0 1px rgba(124, 92, 255, 0.5), 0 18px 40px rgba(124, 92, 255, 0.25);
+  --ancho-maximo: 1200px;
+  --alto-navbar: 68px;
+
+  /* Tiempos de las transiciones */
+  --rapido: 150ms ease;
+  --normal: 250ms ease;
+}
+
+
+/* =====================================================================
+   2. BASE
+   ===================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--degradado-fondo), var(--color-fondo);
+  background-attachment: fixed;
+  color: var(--color-texto);
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 0.5em;
+  font-family: var(--fuente-titulos);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.4rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); }
+h3 { font-size: 1.2rem; }
+
+p { margin: 0 0 1em; }
+
+a {
+  color: var(--color-secundario);
+  text-decoration: none;
+  transition: color var(--rapido);
+}
+
+a:hover { color: #fff; }
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* El foco del teclado siempre se ve: es parte de la accesibilidad */
+:focus-visible {
+  outline: 3px solid var(--color-secundario);
+  outline-offset: 2px;
+}
+
+[hidden] { display: none !important; }
+
+
+/* =====================================================================
+   3. ESTRUCTURA
+   ===================================================================== */
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+main { flex: 1; }
+
+.seccion { padding: 3rem 0; }
+
+.seccion-encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.seccion-titulo { margin: 0; }
+
+.seccion-subtitulo {
+  margin: 0.25rem 0 0;
+  color: var(--color-texto-suave);
+}
+
+/* Grilla de tarjetas: tantas columnas como entren, de 240px como mínimo */
+.grilla-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.grilla-dos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+
+/* =====================================================================
+   4. COMPONENTES
+   ===================================================================== */
+
+/* ---------- Navbar --------------------------------------------------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(10, 12, 22, 0.75);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.navbar-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--alto-navbar);
+}
+
+.navbar-marca {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-texto);
+  font-family: var(--fuente-titulos);
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.navbar-marca:hover { color: var(--color-texto); }
+
+.navbar-logo {
+  width: 36px;
+  height: 36px;
+  transition: transform var(--normal);
+}
+
+.navbar-marca:hover .navbar-logo { transform: rotate(-12deg) scale(1.1); }
+
+.navbar-menu {
+  display: flex;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar-enlace {
+  display: block;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  color: var(--color-texto-suave);
+  font-weight: 600;
+  transition: background-color var(--rapido), color var(--rapido);
+}
+
+.navbar-enlace:hover {
+  background: var(--color-superficie-2);
+  color: var(--color-texto);
+}
+
+/* La página actual lleva aria-current="page" en su enlace */
+.navbar-enlace[aria-current="page"] {
+  background: rgba(124, 92, 255, 0.18);
+  color: #fff;
+}
+
+/* El botón de menú solo aparece en el celular (ver sección 7) */
+.navbar .navbar-toggle { display: none; }
+
+
+/* ---------- Hero ------------------------------------------------------ */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 0 4rem;
+}
+
+.hero-contenido {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-etiqueta {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 999px;
+  color: var(--color-secundario);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-titulo span {
+  background: var(--degradado-marca);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-texto {
+  max-width: 34rem;
+  color: var(--color-texto-suave);
+  font-size: 1.15rem;
+}
+
+.hero-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.hero-datos {
+  display: flex;
+  gap: 2rem;
+  margin: 2.5rem 0 0;
+}
+
+.hero-dato dt {
+  color: var(--color-texto-tenue);
+  font-size: 0.85rem;
+}
+
+.hero-dato dd {
+  margin: 0;
+  font-family: var(--fuente-titulos);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+/* Las tres portadas que flotan a la derecha del hero */
+.hero-vitrina {
+  position: relative;
+  height: 400px;
+}
+
+.hero-portada {
+  position: absolute;
+  width: 210px;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  animation: flotar 6s ease-in-out infinite;
+}
+
+.hero-portada:nth-child(1) { top: 40px; left: 0; transform: rotate(-8deg); }
+.hero-portada:nth-child(2) { top: 0; left: 30%; z-index: 2; animation-delay: -2s; }
+.hero-portada:nth-child(3) { top: 60px; right: 0; transform: rotate(8deg); animation-delay: -4s; }
+
+
+/* ---------- Botones -------------------------------------------------- */
+/* .btn es la base. Se combina con un color (.btn-primario, .btn-peligro...)
+   y, si hace falta, con un tamaño (.btn-chico, .btn-grande) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--color-superficie-2);
+  color: var(--color-texto);
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform var(--rapido), background-color var(--rapido),
+              box-shadow var(--normal), border-color var(--rapido), color var(--rapido);
+}
+
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(0.97); }
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-primario {
+  background: var(--color-primario);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(124, 92, 255, 0.35);
+}
+
+.btn-primario:hover:not(:disabled) {
+  background: var(--color-primario-hover);
+  box-shadow: 0 10px 28px rgba(124, 92, 255, 0.5);
+  color: #fff;
+}
+
+.btn-secundario {
+  background: var(--color-secundario);
+  color: #062530;
+}
+
+.btn-secundario:hover:not(:disabled) { color: #062530; filter: brightness(1.1); }
+
+.btn-contorno {
+  border-color: var(--color-borde);
+  background: transparent;
+  color: var(--color-texto);
+}
+
+.btn-contorno:hover:not(:disabled) {
+  border-color: var(--color-primario);
+  color: #fff;
+}
+
+.btn-peligro {
+  background: rgba(244, 63, 94, 0.15);
+  border-color: rgba(244, 63, 94, 0.45);
+  color: #ffc2cd;
+}
+
+.btn-peligro:hover:not(:disabled) {
+  background: var(--color-peligro);
+  color: #fff;
+}
+
+.btn-fantasma {
+  background: transparent;
+  color: var(--color-texto-suave);
+}
+
+.btn-fantasma:hover:not(:disabled) { color: var(--color-texto); background: var(--color-superficie-2); }
+
+.btn-chico { padding: 0.4rem 0.85rem; font-size: 0.875rem; }
+.btn-grande { padding: 0.9rem 1.75rem; font-size: 1.1rem; }
+.btn-bloque { width: 100%; }
+
+/* Botón cuadrado que solo tiene un ícono (cerrar, menú) */
+.btn-icono {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  font-size: 1.3rem;
+}
+
+
+/* ---------- Insignias (badges) --------------------------------------- */
+.insignia {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--color-superficie-2);
+  color: var(--color-texto-suave);
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.insignia-primario { background: rgba(124, 92, 255, 0.2); color: #cfc4ff; }
+.insignia-exito { background: rgba(34, 197, 94, 0.15); color: #86efac; }
+.insignia-peligro { background: rgba(244, 63, 94, 0.15); color: #fda4af; }
+.insignia-advertencia { background: rgba(245, 158, 11, 0.15); color: #fcd34d; }
+
+.lista-insignias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+/* ---------- Chips de filtro (géneros) -------------------------------- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 999px;
+  background: var(--color-superficie);
+  color: var(--color-texto-suave);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--rapido);
+}
+
+.chip:hover { border-color: var(--color-primario); color: var(--color-texto); }
+
+/* El chip elegido lleva aria-pressed="true": el estilo sale del atributo */
+.chip[aria-pressed="true"] {
+  border-color: transparent;
+  background: var(--degradado-marca);
+  color: #0a0c16;
+}
+
+
+/* ---------- Tarjeta -------------------------------------------------- */
+.tarjeta {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-grande);
+  background: var(--color-superficie);
+  transition: transform var(--normal), box-shadow var(--normal), border-color var(--normal);
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  border-color: transparent;
+  box-shadow: var(--sombra-brillo);
+}
+
+/* Marco de la imagen: relación 2:3, como la caja de un videojuego */
+.tarjeta-imagen {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  background: var(--color-superficie-2);
+}
+
+.tarjeta-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.tarjeta:hover .tarjeta-imagen img { transform: scale(1.06); }
+
+/* Insignia que va encima de la imagen (por ejemplo, "Sin stock") */
+.tarjeta-insignia {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 1;
+}
+
+.tarjeta-cuerpo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.1rem 1.1rem 0.5rem;
+}
+
+.tarjeta-subtitulo {
+  margin: 0;
+  color: var(--color-texto-tenue);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.tarjeta-titulo {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* El enlace del título cubre toda la tarjeta: se puede hacer clic en cualquier parte */
+.tarjeta-titulo a { color: var(--color-texto); }
+.tarjeta-titulo a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.tarjeta-texto {
+  margin: 0;
+  color: var(--color-texto-suave);
+  font-size: 0.9rem;
+  /* Corta la descripción en 2 renglones con "..." */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tarjeta-pie {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.75rem 1.1rem 1.1rem;
+}
+
+.tarjeta-precio {
+  font-family: var(--fuente-titulos);
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.tarjeta-stock {
+  color: var(--color-texto-tenue);
+  font-size: 0.8rem;
+}
+
+/* Variante: tarjeta de un juego sin stock */
+.tarjeta-agotada .tarjeta-imagen img { filter: grayscale(0.85) brightness(0.7); }
+.tarjeta-agotada .tarjeta-precio { color: var(--color-texto-tenue); }
+
+/* Recuadro que reemplaza a una imagen que falta o no carga */
+.sin-imagen {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(45deg, var(--color-superficie-2) 0 12px, var(--color-superficie) 12px 24px);
+  color: var(--color-texto-tenue);
+  font-weight: 700;
+  text-align: center;
+}
+
+
+/* ---------- Barra de filtros ----------------------------------------- */
+.filtros {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 0.75rem;
+  align-items: end;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  background: var(--color-superficie);
+}
+
+.resultado-info {
+  margin: 1rem 0;
+  color: var(--color-texto-suave);
+  font-size: 0.9rem;
+}
+
+
+/* ---------- Formularios ---------------------------------------------- */
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+/* Dos campos lado a lado (en el celular quedan uno abajo del otro) */
+.form-fila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1rem;
+}
+
+.form-etiqueta {
+  color: var(--color-texto-suave);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.form-etiqueta .requerido { color: var(--color-peligro); }
+
+.form-control,
+.form-select {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-chico);
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  font: inherit;
+  transition: border-color var(--rapido), box-shadow var(--rapido);
+}
+
+.form-control::placeholder { color: var(--color-texto-tenue); }
+
+.form-control:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 4px rgba(124, 92, 255, 0.25);
+}
+
+textarea.form-control {
+  min-height: 96px;
+  resize: vertical;
+}
+
+/* Campo con error: lo marca JavaScript con la clase .invalido */
+.form-control.invalido,
+.form-select.invalido {
+  border-color: var(--color-peligro);
+  box-shadow: 0 0 0 4px rgba(244, 63, 94, 0.18);
+  animation: sacudir 300ms ease;
+}
+
+.form-ayuda {
+  margin: 0;
+  color: var(--color-texto-tenue);
+  font-size: 0.8rem;
+}
+
+.form-error {
+  margin: 0;
+  color: #fda4af;
+  font-size: 0.85rem;
+  font-weight: 600;
+  animation: aparecer 200ms ease;
+}
+
+/* Casilla con su texto (checkbox) */
+.form-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-texto-suave);
+  cursor: pointer;
+}
+
+.form-check input {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--color-primario);
+}
+
+/* Grupo de casillas (plataformas) */
+.form-casillas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-chico);
+}
+
+.form-casillas legend {
+  padding: 0 0.4rem;
+  color: var(--color-texto-suave);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Vista previa de la portada en el formulario */
+.vista-previa {
+  width: 96px;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-chico);
+  background: var(--color-superficie-2);
+  font-size: 0.7rem;
+}
+
+.vista-previa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.campo-con-vista {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: start;
+}
+
+
+/* ---------- Tabla ---------------------------------------------------- */
+/* El contenedor hace que la tabla se desplace sola en pantallas angostas */
+.tabla-contenedor {
+  position: relative;   /* contiene a los textos .oculto-visual (position: absolute) de la tabla */
+  overflow-x: auto;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  background: var(--color-superficie);
+}
+
+.tabla {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+.tabla caption {
+  padding: 1rem;
+  color: var(--color-texto-suave);
+  text-align: left;
+}
+
+.tabla th,
+.tabla td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-borde);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.tabla th {
+  color: var(--color-texto-tenue);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tabla tbody tr {
+  transition: background-color var(--rapido);
+  animation: aparecer 300ms ease both;
+}
+
+.tabla tbody tr:hover { background: var(--color-superficie-2); }
+.tabla tbody tr:last-child td { border-bottom: none; }
+
+.tabla .numero { text-align: right; font-variant-numeric: tabular-nums; }
+
+.tabla-miniatura {
+  width: 44px;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border-radius: 6px;
+  font-size: 0.55rem;
+}
+
+.tabla-miniatura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tabla-acciones {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: flex-end;
+}
+
+.tabla-mensaje {
+  padding: 2rem 1rem;
+  color: var(--color-texto-suave);
+  text-align: center;
+}
+
+
+/* ---------- Modal (etiqueta <dialog>) -------------------------------- */
+.modal {
+  width: min(640px, calc(100% - 2rem));
+  max-height: calc(100vh - 2rem);
+  padding: 0;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-grande);
+  background: var(--color-superficie);
+  color: var(--color-texto);
+  box-shadow: var(--sombra);
+}
+
+.modal[open] { animation: entrar-modal 250ms ease; }
+
+/* El fondo oscuro detrás del modal */
+.modal::backdrop {
+  background: rgba(5, 6, 12, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.modal-chico { width: min(440px, calc(100% - 2rem)); }
+
+.modal-encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.modal-titulo { margin: 0; font-size: 1.3rem; }
+
+.modal-cuerpo { padding: 1.5rem; }
+
+.modal-pie {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--color-borde);
+}
+
+
+/* ---------- Alertas (mensaje fijo dentro de la página) -------------- */
+.alerta {
+  margin-bottom: 1rem;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid var(--color-borde);
+  border-left-width: 4px;
+  border-radius: var(--radio-chico);
+  background: var(--color-superficie-2);
+  animation: aparecer 250ms ease;
+}
+
+.alerta-error { border-color: var(--color-peligro); background: rgba(244, 63, 94, 0.1); }
+.alerta-exito { border-color: var(--color-exito); background: rgba(34, 197, 94, 0.1); }
+.alerta-info { border-color: var(--color-secundario); background: rgba(34, 211, 238, 0.08); }
+.alerta-advertencia { border-color: var(--color-advertencia); background: rgba(245, 158, 11, 0.1); }
+
+
+/* ---------- Toasts (avisos flotantes que se van solos) -------------- */
+.toasts {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-width: min(380px, calc(100% - 2.5rem));
+}
+
+.toast {
+  padding: 0.9rem 1.1rem;
+  border-left: 4px solid var(--color-secundario);
+  border-radius: var(--radio-chico);
+  background: var(--color-superficie-2);
+  box-shadow: var(--sombra);
+  animation: entrar-toast 300ms ease;
+}
+
+.toast-exito { border-color: var(--color-exito); }
+.toast-error { border-color: var(--color-peligro); }
+
+/* JavaScript le suma esta clase antes de quitarlo, para que salga animado */
+.toast.saliendo { animation: salir-toast 300ms ease forwards; }
+
+
+/* ---------- Estados de una lista: cargando, error y vacío ------------ */
+.estado {
+  grid-column: 1 / -1;
+  padding: 3rem 1.5rem;
+  border: 1px dashed var(--color-borde);
+  border-radius: var(--radio);
+  text-align: center;
+  animation: aparecer 300ms ease;
+}
+
+.estado-icono {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.estado-titulo { margin-bottom: 0.25rem; }
+.estado-texto { color: var(--color-texto-suave); }
+.estado-error { border-color: rgba(244, 63, 94, 0.5); }
+
+
+/* ---------- Esqueleto (placeholder animado mientras carga) ---------- */
+.esqueleto {
+  border-radius: var(--radio-chico);
+  background: linear-gradient(90deg, var(--color-superficie-2) 0%, #262d4b 50%, var(--color-superficie-2) 100%);
+  background-size: 200% 100%;
+  animation: brillo 1.4s linear infinite;
+}
+
+.esqueleto-tarjeta {
+  overflow: hidden;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-grande);
+  background: var(--color-superficie);
+}
+
+.esqueleto-imagen { aspect-ratio: 2 / 3; border-radius: 0; }
+.esqueleto-linea { height: 0.9rem; margin: 1rem 1.1rem 0; }
+.esqueleto-linea-corta { width: 50%; margin-bottom: 1.25rem; }
+
+
+/* ---------- Paginación ----------------------------------------------- */
+.paginacion {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 2rem;
+}
+
+.paginacion-numero {
+  min-width: 42px;
+  height: 42px;
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  background: var(--color-superficie);
+  color: var(--color-texto-suave);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--rapido);
+}
+
+.paginacion-numero:hover { border-color: var(--color-primario); color: var(--color-texto); }
+
+.paginacion-numero[aria-current="page"] {
+  border-color: transparent;
+  background: var(--color-primario);
+  color: #fff;
+}
+
+.paginacion-info {
+  width: 100%;
+  margin: 0.5rem 0 0;
+  color: var(--color-texto-tenue);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+
+/* ---------- Migas de pan (breadcrumb) -------------------------------- */
+.migas ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  color: var(--color-texto-tenue);
+  font-size: 0.9rem;
+  list-style: none;
+}
+
+.migas li + li::before {
+  content: "›";
+  margin-right: 0.5rem;
+}
+
+
+/* ---------- Detalle del juego ---------------------------------------- */
+.detalle {
+  display: grid;
+  grid-template-columns: minmax(240px, 380px) 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.detalle-portada {
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 2 / 3;
+  border-radius: var(--radio-grande);
+  box-shadow: var(--sombra-brillo);
+  animation: aparecer 500ms ease;
+}
+
+.detalle-portada img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detalle-precio {
+  margin: 1rem 0;
+  font-family: var(--fuente-titulos);
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.detalle-descripcion {
+  color: var(--color-texto-suave);
+  font-size: 1.1rem;
+}
+
+/* Ficha técnica: lista de definiciones <dl> en dos columnas */
+.ficha {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.6rem 1.5rem;
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  background: var(--color-superficie);
+}
+
+.ficha dt { color: var(--color-texto-tenue); }
+.ficha dd { margin: 0; font-weight: 600; }
+
+
+/* ---------- Métricas (tarjetas del resumen) -------------------------- */
+.metricas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 0 0 2rem;
+}
+
+.metrica {
+  padding: 1.25rem;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  background: var(--color-superficie);
+  animation: aparecer 400ms ease both;
+}
+
+.metrica:nth-child(2) { animation-delay: 80ms; }
+.metrica:nth-child(3) { animation-delay: 160ms; }
+.metrica:nth-child(4) { animation-delay: 240ms; }
+
+.metrica dt {
+  color: var(--color-texto-tenue);
+  font-size: 0.85rem;
+}
+
+.metrica dd {
+  margin: 0.25rem 0 0;
+  font-family: var(--fuente-titulos);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+
+/* ---------- Bloque de código (JSON enviado y recibido) -------------- */
+.panel-json {
+  margin-top: 2rem;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  background: var(--color-superficie);
+}
+
+.panel-json summary {
+  padding: 1rem 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.panel-json-cuerpo { padding: 0 1.25rem 1.25rem; }
+
+.codigo {
+  max-height: 340px;
+  margin: 0;
+  overflow: auto;
+  padding: 1rem;
+  border-radius: var(--radio-chico);
+  background: #05060c;
+  color: #c7f9ff;
+  font-family: var(--fuente-codigo);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+
+/* ---------- Pie de página -------------------------------------------- */
+.pie {
+  margin-top: 4rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--color-borde);
+  background: rgba(5, 6, 12, 0.6);
+  color: var(--color-texto-tenue);
+  font-size: 0.9rem;
+}
+
+.pie-columnas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.pie-enlaces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pie a { color: var(--color-texto-suave); }
+.pie a:hover { color: var(--color-texto); }
+
+
+/* ---------- Paneles de administración -------------------------------- */
+.panel {
+  padding: 1.5rem;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-grande);
+  background: rgba(18, 22, 42, 0.6);
+}
+
+.panel-form {
+  padding: 1.25rem;
+  border-radius: var(--radio);
+  background: var(--color-superficie-2);
+}
+
+/* Buscador de una sola columna (página de administración) */
+.barra-simple { grid-template-columns: minmax(0, 480px); }
+
+/* Tabla angosta: no necesita el ancho mínimo de la tabla grande */
+.tabla-compacta { min-width: 0; }
+
+/* La fila recién creada o editada se ilumina unos segundos */
+.fila-resaltada { animation: resaltar 2.5s ease; }
+
+/* Enlace para saltar el menú: oculto hasta que recibe el foco con Tab */
+.saltar-al-contenido {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 200;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radio-chico);
+  background: var(--color-primario);
+  color: #fff;
+  font-weight: 700;
+}
+
+.saltar-al-contenido:focus { top: 1rem; color: #fff; }
+
+/* Título chico dentro de un panel */
+.h-chico {
+  font-family: var(--fuente-texto);
+  font-size: 0.95rem;
+  color: var(--color-texto-suave);
+}
+
+code {
+  padding: 0.1rem 0.4rem;
+  border-radius: 6px;
+  background: #05060c;
+  color: #c7f9ff;
+  font-family: var(--fuente-codigo);
+  font-size: 0.9em;
+}
+
+.detalle-precio { display: block; }
+
+
+/* =====================================================================
+   5. UTILIDADES
+   Clases chicas que hacen UNA sola cosa. Se suman a cualquier etiqueta.
+   ===================================================================== */
+/* Oculta algo a la vista pero lo deja para los lectores de pantalla */
+.oculto-visual {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.texto-centro { text-align: center; }
+.texto-suave { color: var(--color-texto-suave); }
+.texto-degradado {
+  background: var(--degradado-marca);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.d-flex { display: flex; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-entre { justify-content: space-between; }
+.items-centro { align-items: center; }
+.gap-1 { gap: 0.5rem; }
+.gap-2 { gap: 1rem; }
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 2rem; }
+.mb-0 { margin-bottom: 0; }
+.mb-2 { margin-bottom: 1rem; }
+
+
+/* =====================================================================
+   6. ANIMACIONES
+   ===================================================================== */
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes brillo {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}
+
+@keyframes entrar-modal {
+  from { opacity: 0; transform: translateY(20px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes entrar-toast {
+  from { opacity: 0; transform: translateX(110%); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes salir-toast {
+  to { opacity: 0; transform: translateX(110%); }
+}
+
+@keyframes sacudir {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@keyframes resaltar {
+  0%, 40% { background-color: rgba(124, 92, 255, 0.35); }
+  100% { background-color: transparent; }
+}
+
+@keyframes flotar {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -14px; }
+}
+
+/* Las tarjetas entran de a una: cada una un poco después que la anterior */
+.animar-entrada { animation: aparecer 450ms ease both; }
+.animar-entrada:nth-child(2) { animation-delay: 40ms; }
+.animar-entrada:nth-child(3) { animation-delay: 80ms; }
+.animar-entrada:nth-child(4) { animation-delay: 120ms; }
+.animar-entrada:nth-child(5) { animation-delay: 160ms; }
+.animar-entrada:nth-child(6) { animation-delay: 200ms; }
+.animar-entrada:nth-child(7) { animation-delay: 240ms; }
+.animar-entrada:nth-child(8) { animation-delay: 280ms; }
+.animar-entrada:nth-child(9) { animation-delay: 320ms; }
+.animar-entrada:nth-child(10) { animation-delay: 360ms; }
+.animar-entrada:nth-child(11) { animation-delay: 400ms; }
+.animar-entrada:nth-child(12) { animation-delay: 440ms; }
+
+
+/* =====================================================================
+   7. CELULAR Y ACCESIBILIDAD
+   ===================================================================== */
+@media (max-width: 900px) {
+  .hero-contenido,
+  .detalle { grid-template-columns: 1fr; }
+
+  .hero-vitrina { display: none; }
+
+  .filtros { grid-template-columns: 1fr 1fr; }
+  .filtros .form-grupo:first-child { grid-column: 1 / -1; }
+}
+
+@media (max-width: 720px) {
+  /* El menú se vuelve desplegable: el botón le cambia aria-expanded */
+  .navbar .navbar-toggle { display: inline-flex; }
+
+  .navbar-menu {
+    position: absolute;
+    top: var(--alto-navbar);
+    right: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--color-borde);
+    background: var(--color-fondo);
+  }
+
+  .navbar-menu.abierto {
+    display: flex;
+    animation: aparecer 200ms ease;
+  }
+
+  .hero { padding: 3rem 0 2rem; }
+  .hero-datos { gap: 1.25rem; }
+
+  .form-fila,
+  .filtros { grid-template-columns: 1fr; }
+
+  .grilla-tarjetas { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; }
+  .tarjeta-texto { display: none; }
+
+  .modal-pie { flex-direction: column-reverse; }
+  .modal-pie .btn { width: 100%; }
+}
+
+/* Quien pide menos movimiento en su sistema no ve las animaciones */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}

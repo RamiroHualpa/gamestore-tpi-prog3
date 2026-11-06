@@ -1,0 +1,33 @@
+{
+  "titulo": "Dark Souls III",
+  "descripcion": "Combate preciso y castigador en un reino que se apaga. Cada derrota enseña algo.",
+  "genero": "RPG",
+  "anio_lanzamiento": 2016,
+  "precio": 30000.0,
+  "stock": 3,
+  "imagen_url": "img/juegos/dark-souls-iii.webp",
+  "imagen_respaldo_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/374320/library_600x900.jpg",
+  "estudio_id": 6,
+  "id": 11,
+  "activo": true,
+  "estudio": {
+    "nombre": "FromSoftware",
+    "pais": "Japón",
+    "id": 6,
+    "activo": true
+  },
+  "plataformas": [
+    {
+      "nombre": "PC",
+      "id": 1
+    },
+    {
+      "nombre": "PlayStation",
+      "id": 2
+    },
+    {
+      "nombre": "Xbox",
+      "id": 3
+    }
+  ]
+}

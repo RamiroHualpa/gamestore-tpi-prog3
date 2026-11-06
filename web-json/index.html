@@ -1,0 +1,194 @@
+<!doctype html>
+<!-- lang: el idioma de la página. Lo usan los buscadores y los lectores de pantalla. -->
+<html lang="es-AR">
+<head>
+  <!-- ===== Lo mínimo de toda página ===== -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===== Para los buscadores (SEO) =====
+       title: el título azul del resultado de Google (unos 60 caracteres).
+       description: el texto gris de abajo (unos 155 caracteres).
+       canonical: la dirección "oficial" de la página. Se cambia por el dominio real al publicarla. -->
+  <title>GameStore | Videojuegos para PC, PlayStation, Xbox y Switch</title>
+  <meta name="description" content="Catálogo de videojuegos de acción, aventura, rol, deportes y estrategia. Filtrá por género, plataforma o estudio y mirá el stock al instante.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ramirohualpa.github.io/gamestore-tpi-prog3/web-json/">
+
+  <!-- ===== Para compartir en redes (Open Graph y Twitter) ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GameStore">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="GameStore | Videojuegos para todas las plataformas">
+  <meta property="og:description" content="Catálogo de videojuegos con filtros por género, plataforma y estudio.">
+  <meta property="og:url" content="https://ramirohualpa.github.io/gamestore-tpi-prog3/web-json/">
+  <meta property="og:image" content="https://ramirohualpa.github.io/gamestore-tpi-prog3/web-json/img/compartir.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- ===== Ícono, color del navegador en el celular y estilos ===== -->
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0a0c16">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;800&display=swap">
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <!-- ===== Datos estructurados (schema.org) =====
+       Le cuentan a Google, en un formato que entiende, qué es este sitio. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "GameStore",
+    "url": "https://ramirohualpa.github.io/gamestore-tpi-prog3/web-json/",
+    "inLanguage": "es-AR",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://ramirohualpa.github.io/gamestore-tpi-prog3/web-json/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- type="module": permite usar import y export. Los módulos se ejecutan
+       cuando el HTML ya terminó de cargar, por eso pueden ir en el <head>. -->
+  <script type="module" src="js/catalogo.js"></script>
+</head>
+
+<body>
+  <!-- Enlace para saltar el menú con el teclado (aparece al presionar Tab) -->
+  <a class="saltar-al-contenido" href="#contenido">Saltar al contenido</a>
+
+  <!-- ================= ENCABEZADO Y MENÚ ================= -->
+  <header class="navbar">
+    <div class="contenedor navbar-contenido">
+      <a class="navbar-marca" href="index.html" aria-label="GameStore, ir al inicio">
+        <img class="navbar-logo" src="img/favicon.svg" alt="" width="36" height="36">
+        GameStore
+      </a>
+
+      <button class="btn btn-fantasma btn-icono navbar-toggle" type="button"
+              aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">☰</button>
+
+      <nav aria-label="Principal">
+        <ul class="navbar-menu" id="menu-principal">
+          <li><a class="navbar-enlace" href="index.html" aria-current="page">Catálogo</a></li>
+          <li><a class="navbar-enlace" href="admin.html">Administrar juegos</a></li>
+          <li><a class="navbar-enlace" href="estudios.html">Estudios y plataformas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Solo en esta versión: avisa que no hay API ni base de datos -->
+  <div class="contenedor mt-2">
+    <p class="alerta alerta-info mb-0"><strong>Versión sin API:</strong> los datos salen de archivos JSON de la carpeta <code>datos/</code>. Las altas, ediciones y bajas se guardan en memoria y se pierden al recargar.</p>
+  </div>
+
+  <main id="contenido">
+    <!-- ================= HERO ================= -->
+    <section class="hero" aria-labelledby="titulo-principal">
+      <div class="contenedor hero-contenido">
+        <div>
+          <p class="hero-etiqueta">Ejemplo resuelto · Programación III</p>
+          <!-- Un solo <h1> por página: es el tema principal para el buscador -->
+          <h1 class="hero-titulo" id="titulo-principal">Tu próximo juego <span>te está esperando</span></h1>
+          <p class="hero-texto">
+            Recorré el catálogo, filtrá por género, plataforma o estudio y mirá el stock al instante.
+            En esta versión los datos salen de archivos JSON, leídos con fetch.
+          </p>
+          <div class="hero-acciones">
+            <a class="btn btn-primario btn-grande" href="#catalogo">Ver catálogo</a>
+            <a class="btn btn-contorno btn-grande" href="admin.html">Cargar un juego</a>
+          </div>
+
+          <!-- <dl>: lista de definiciones (término <dt> y valor <dd>) -->
+          <dl class="hero-datos">
+            <div class="hero-dato"><dt>Juegos</dt><dd id="dato-juegos">–</dd></div>
+            <div class="hero-dato"><dt>Plataformas</dt><dd id="dato-plataformas">–</dd></div>
+            <div class="hero-dato"><dt>Estudios</dt><dd id="dato-estudios">–</dd></div>
+          </dl>
+        </div>
+
+        <!-- Imágenes decorativas: alt vacío, el lector de pantalla las saltea -->
+        <div class="hero-vitrina" aria-hidden="true">
+          <img class="hero-portada" src="img/juegos/hollow-knight.webp" alt="" width="210" height="315">
+          <img class="hero-portada" src="img/juegos/elden-ring.webp" alt="" width="210" height="315">
+          <img class="hero-portada" src="img/juegos/hades.webp" alt="" width="210" height="315">
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CATÁLOGO ================= -->
+    <section class="seccion" id="catalogo" aria-labelledby="titulo-catalogo">
+      <div class="contenedor">
+        <div class="seccion-encabezado">
+          <div>
+            <h2 class="seccion-titulo" id="titulo-catalogo">Catálogo</h2>
+            <p class="seccion-subtitulo">Doce juegos por página, armados desde un archivo JSON.</p>
+          </div>
+        </div>
+
+        <!-- role="search" marca este formulario como el buscador del sitio -->
+        <form class="filtros" id="filtros" role="search" aria-label="Buscar y filtrar juegos">
+          <div class="form-grupo mb-0">
+            <label class="form-etiqueta" for="q">Buscar</label>
+            <input class="form-control" id="q" name="q" type="search" maxlength="50"
+                   placeholder="Título o descripción…" autocomplete="off">
+          </div>
+          <div class="form-grupo mb-0">
+            <label class="form-etiqueta" for="plataforma">Plataforma</label>
+            <select class="form-select" id="plataforma" name="plataforma">
+              <option value="">Todas</option>
+            </select>
+          </div>
+          <div class="form-grupo mb-0">
+            <label class="form-etiqueta" for="estudio">Estudio</label>
+            <select class="form-select" id="estudio" name="estudio">
+              <option value="">Todos</option>
+            </select>
+          </div>
+          <label class="form-check">
+            <input type="checkbox" name="stock"> Solo con stock
+          </label>
+        </form>
+
+        <!-- Los chips de género se crean con JavaScript, con los valores que devuelve la API -->
+        <div class="chips" id="chips-genero" role="group" aria-label="Filtrar por género"></div>
+
+        <!-- aria-live: el lector de pantalla anuncia este texto cada vez que cambia -->
+        <p class="resultado-info" id="resultado" aria-live="polite"></p>
+
+        <!-- Contenedores VACÍOS: las tarjetas y los mensajes los arma JavaScript -->
+        <div class="estado" id="estado-lista" hidden></div>
+        <div class="grilla-tarjetas" id="grilla" aria-live="polite"></div>
+        <nav class="paginacion" id="paginacion" aria-label="Páginas del catálogo" hidden></nav>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= PIE ================= -->
+  <footer class="pie">
+    <div class="contenedor pie-columnas">
+      <div>
+        <p class="mb-0"><strong>GameStore</strong> · Ejemplo de la Tecnicatura Universitaria en Programación</p>
+        <p class="mb-0"><small>&copy; <span id="anio-actual">2026</span> · Portadas ilustrativas, no son las originales.</small></p>
+      </div>
+      <nav aria-label="Pie de página">
+        <ul class="pie-enlaces">
+          <li><a href="index.html">Catálogo</a></li>
+          <li><a href="admin.html">Administrar juegos</a></li>
+          <li><a href="estudios.html">Estudios y plataformas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Acá aparecen los avisos flotantes (toasts) -->
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <noscript>
+    <p class="alerta alerta-advertencia contenedor">Esta página necesita JavaScript para mostrar el catálogo.</p>
+  </noscript>
+</body>
+</html>

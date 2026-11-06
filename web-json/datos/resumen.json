@@ -1,0 +1,15 @@
+{
+  "total_activos": 45,
+  "unidades_en_stock": 324,
+  "sin_stock": 5,
+  "por_genero": {
+    "ACCION": 10,
+    "AVENTURA": 6,
+    "CARRERAS": 4,
+    "DEPORTES": 4,
+    "ESTRATEGIA": 4,
+    "INDIE": 8,
+    "RPG": 6,
+    "SHOOTER": 3
+  }
+}
